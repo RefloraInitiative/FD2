@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reflora</title>
+        <link rel="stylesheet" href="./../build/cd-style.css" />
+        <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
+        <link rel="stylesheet" href="./css/splide.css" />
+        <link rel="stylesheet" href="./fonts/cd/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <style>
+            svg:hover text,
+            svg:hover polyline {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="cd-verticalBar">
+            <div class="cd-verticalBar__hamburger bi bi-list"></div>
+            <nav class="cd-verticalBar__list">
+                <ul>
+                    <li>
+                        <a class="active text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon balance</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="company-settings.html"><span class="dash-setting"></span><span>Settings</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cd-verticalBar__info text-center">
+                <a href="#">
+                    <img class="mar-b-30" src="./images/logo/cd-logo.png" alt="Reflora brand logo" />
+                </a>
+                <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
+                <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">T & C</a>
+            </div>
+        </header>
+
+        <main class="desktop:mar-l-35 desktop:pad-l-40">
+            <div class="desktop:mar-10">
+                <div class="nv-row mar-h-0">
+                    <div class="nv-col-12 fluid-wrapper cd-banner">
+                        <img src="./images/dashboard-bg-1.png" class="cd-banner__image" alt="background forest view" />
+                        <div class="pad-h-5 cd-banner__title">HELLO APOORVA,</div>
+                        <div class="pad-h-5 cd-banner__desc">THIS IS YOUR CARBON BALANCE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fluid-wrapper mar-t-20">
+                <div class="nv-row nv-justify-content-center desktop:nv-justify-content-between nv-align-items-center">
+                    <div class="nv-col-12 desktop:nv-col-4">
+                        <div id="chartdiv"></div>
+                    </div>
+                    <div class="nv-col-12 desktop:nv-col-4">
+                        <div id="chartdiv1"></div>
+                    </div>
+
+                    <!-- carbon card usage
+                
+                cd-carbonCard  add along with this card [negative/positive/neutral] to change in UI
+
+                Example:
+                <div class="cd-carbonCard negative full-height negative nv-pos-relative clear-fix">
+                
+                </div>
+                
+                -->
+                    <div class="nv-col-12 desktop:nv-col-4 clear-fix">
+                        <div class="cd-carbonCard negative full-height negative nv-pos-relative clear-fix">
+                            <svg class="nv-pos-absolute float-right-0 mar-r-n3" width="207" height="179" viewBox="0 0 207 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_76_10" style="mask-type: alpha;" maskUnits="userSpaceOnUse" x="6" y="-1" width="202" height="181">
+                                    <path
+                                        d="M82.2373 41.5206C89.0745 37.8705 93.6578 31.2341 96.4237 24.063C100.979 12.252 111.104 0 123.763 0H187C198.046 0 207 8.9543 207 20V159C207 170.046 198.046 179 187 179H22.9754C11.1706 179 2.35531 168.493 8.85211 158.637C14.4195 150.19 23.8379 141.275 39.7046 136.557C52.4644 131.482 71.1315 118.334 61.4435 90.4227C48.2111 56.7448 70.8952 48.6714 82.2373 41.5206Z"
+                                        fill="#C4C4C4"
+                                        stroke="black"
+                                    ></path>
+                                </mask>
+                                <g mask="url(#mask0_76_10)">
+                                    <rect x="0.952515" width="205.08" height="177.135" fill="#FFA654"></rect>
+                                </g>
+                            </svg>
+                            <div class="nv-d-flex full-width nv-align-items-center nv-justify-content-around full-height">
+                                <span class="text-bigger cd-carbonCard__title font-weight-bold"> 100% </span>
+                                <span class="fs-20 text-white nv-d-block text-left z-index-1 font-weight-bold text-left pad-l-50 mar-r-0">
+                                    Carbon <br />
+                                    Negative
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-center font-weight-bold text-primary mar-v-10">CARBON BALANCE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nv-d-none desktop:nv-d-block fluid-wrapper pad-h-15 cd-table mar-t-20">
+                <div class="nv-row cd-table__row">
+                    <div class="nv-col-10">
+                        <div class="cd-table__thead">
+                            <div class="cd-table__th">
+                                NAME
+                            </div>
+                            <div class="cd-table__th">
+                                YEAR
+                            </div>
+                            <div class="cd-table__th">
+                                EMISSIONS
+                            </div>
+                            <div class="cd-table__th">
+                                OFFSET
+                            </div>
+                            <div class="cd-table__th">
+                                STATUS
+                            </div>
+                            <div class="cd-table__th">
+                                DATE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nv-col-2"></div>
+                </div>
+                <div class="overflow-scroll cd-scrollBar">
+                    <div class="nv-row cd-table__row">
+                        <div class="nv-col-10">
+                            <div class="cd-table__tbody">
+                                <div class="cd-table__th">
+                                    <a href="#" data-toggle="modal" data-target="#carbon"> MERCEDES EVENT</a>
+                                </div>
+                                <div class="cd-table__th">
+                                    2021
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    CARBON NEUTRAL
+                                </div>
+                                <div class="cd-table__th">
+                                    16.11.2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-col-2 desktop:pad-l-0">
+                            <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+                                <div class="cd-table__offset text-white grey">
+                                    OFFSET
+                                </div>
+                                <a data-toggle="modal" data-target="#carbon" class="font-weight-bold mar-l-20 text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nv-row cd-table__row">
+                        <div class="nv-col-10">
+                            <div class="cd-table__tbody">
+                                <div class="cd-table__th">
+                                    <a href="#" data-toggle="modal" data-target="#carbon"> MERCEDES EVENT</a>
+                                </div>
+                                <div class="cd-table__th">
+                                    2021
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    0 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    <span class="text-orange">CARBON NEGATIVE</span>
+                                </div>
+                                <div class="cd-table__th">
+                                    16.11.2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-col-2 desktop:pad-l-0">
+                            <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+                                <div class="cd-table__offset bg-secondary text-white">
+                                    OFFSET
+                                </div>
+
+                                <a data-toggle="modal" data-target="#carbon" class="font-weight-bold mar-l-20 text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nv-row cd-table__row">
+                        <div class="nv-col-10">
+                            <div class="cd-table__tbody">
+                                <div class="cd-table__th">
+                                    <a href="#" data-toggle="modal" data-target="#carbon"> MERCEDES EVENT</a>
+                                </div>
+                                <div class="cd-table__th">
+                                    2021
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    0 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    <span class="text-secondary">CARBON POSITIVE</span>
+                                </div>
+                                <div class="cd-table__th">
+                                    16.11.2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-col-2 desktop:pad-l-0">
+                            <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+                                <div class="cd-table__offset grey">
+                                    OFFSET
+                                </div>
+                                <a data-toggle="modal" data-target="#carbon" class="font-weight-bold mar-l-20 text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nv-row cd-table__row">
+                        <div class="nv-col-10">
+                            <div class="cd-table__tbody">
+                                <div class="cd-table__th">
+                                    <a href="#" data-toggle="modal" data-target="#carbon"> MERCEDES EVENT</a>
+                                </div>
+                                <div class="cd-table__th">
+                                    2021
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    0 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    <span class="text-orange">CARBON NEGATIVE</span>
+                                </div>
+                                <div class="cd-table__th">
+                                    16.11.2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-col-2 desktop:pad-l-0">
+                            <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+                                <div class="cd-table__offset bg-secondary text-white">
+                                    OFFSET
+                                </div>
+                                <a data-toggle="modal" data-target="#carbon" class="font-weight-bold mar-l-20 text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nv-row cd-table__row">
+                        <div class="nv-col-10">
+                            <div class="cd-table__tbody">
+                                <div class="cd-table__th">
+                                    <a href="#" data-toggle="modal" data-target="#carbon"> MERCEDES EVENT</a>
+                                </div>
+                                <div class="cd-table__th">
+                                    2021
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    0 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    <span class="text-secondary">CARBON POSITIVE</span>
+                                </div>
+                                <div class="cd-table__th">
+                                    16.11.2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-col-2 desktop:pad-l-0">
+                            <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+                                <div class="cd-table__offset grey">
+                                    OFFSET
+                                </div>
+                                <a data-toggle="modal" data-target="#carbon" class="font-weight-bold mar-l-20 text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nv-row cd-table__row">
+                        <div class="nv-col-10">
+                            <div class="cd-table__tbody">
+                                <div class="cd-table__th">
+                                    <a href="#" data-toggle="modal" data-target="#carbon"> MERCEDES EVENT</a>
+                                </div>
+                                <div class="cd-table__th">
+                                    2021
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    0 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    <span class="text-orange">CARBON NEGATIVE</span>
+                                </div>
+                                <div class="cd-table__th">
+                                    16.11.2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-col-2 desktop:pad-l-0">
+                            <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+                                <div class="cd-table__offset bg-secondary text-white">
+                                    OFFSET
+                                </div>
+                                <a data-toggle="modal" data-target="#carbon" class="font-weight-bold mar-l-20 text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nv-row cd-table__row">
+                        <div class="nv-col-10">
+                            <div class="cd-table__tbody">
+                                <div class="cd-table__th">
+                                    <a href="#" data-toggle="modal" data-target="#carbon"> MERCEDES EVENT</a>
+                                </div>
+                                <div class="cd-table__th">
+                                    2021
+                                </div>
+                                <div class="cd-table__th">
+                                    20 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    0 TONS CO2E
+                                </div>
+                                <div class="cd-table__th">
+                                    <span class="text-secondary">CARBON POSITIVE</span>
+                                </div>
+                                <div class="cd-table__th">
+                                    16.11.2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-col-2 desktop:pad-l-0">
+                            <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+                                <div class="cd-table__offset grey">
+                                    OFFSET
+                                </div>
+                                <a data-toggle="modal" data-target="#carbon" class="font-weight-bold mar-l-20 text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nv-d-flex cd-calculate nv-justify-content-center desktop:nv-justify-content-end mar-v-15 pad-r-60">
+                <a class="text-secondary heading-6 font-weight-bold text-right text-decoration-none nv-d-flex nv-justify-content-center nv-align-items-center" href="#">
+                    <span class="text-right"><span class="nv-d-block tablet:nv-d-inline">CALCULATE</span> MORE</span>
+                    <span class="dash-plus heading-3 mar-l-5 nv-d-inline-block text-secondary"></span>
+                </a>
+            </div>
+        </main>
+        <footer>
+            <div class="nv-modal fade cd-modal" id="carbon" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="nv-modal-dialog nv-modal-lg" role="document">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header nv-justify-content-center mar-h-auto">
+                            <h4 id="dataConfirmLabel" class="nv-modal-title text-center mar-b-30 text-secondary">
+                                <p class="dash-left-arrow nv-d-block desktop:nv-d-none text-left text-secondary" data-dismiss="modal">GO BACK</p>
+                                MERCEDES EVENT CLIMACTION ASSETS
+                            </h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="nv-modal-header_close desktop:mar-r-n30"> <span aria-hidden="true" class="nv-modal-header_x dash-close-arc"></span></span>
+                            </button>
+                        </div>
+                        <div class="nv-modal-body">
+                            <div class="">
+                                <div class="">
+                                    <div class="splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <div class="nv-col-10 nv-offset-1 pad-v-10 pad-h-20 cd-slideCard pad-b-10 bg-white">
+                                                        <div class="nv-d-flex nv-flex-column desktop:nv-flex-row nv-justify-content-between mar-b-5">
+                                                            <div class="pad-5 card-text">DATE: 25.10.2021</div>
+                                                            <div class="pad-5 card-text">CLIMAKEY: ORDER NUMBER HERE</div>
+                                                        </div>
+                                                        <div class="nv-row bg-navy-blue nv-align-items-center">
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                                                <img class="img-left img-align-left" src="  ./images/img-3.png" />
+                                                            </div>
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 mar-v-5 text-center">
+                                                                <p class="text-small text-primary font-weight-bold">PROJECT: CASTAÑERO, PERU</p>
+                                                                <p class="text-small text-primary font-weight-bold">OFFSET: 20 TONS CO2E</p>
+                                                            </div>
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                                                <img class="img-left img-align-left" src="./images/logo/Certificate.png" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <div class="nv-col-10 nv-offset-1 pad-v-10 pad-h-20 cd-slideCard pad-b-10 bg-white">
+                                                        <div class="nv-d-flex nv-flex-column desktop:nv-flex-row nv-justify-content-between mar-b-5">
+                                                            <div class="pad-5 card-text">DATE: 25.10.2021</div>
+                                                            <div class="pad-5 card-text">CLIMAKEY: ORDER NUMBER HERE</div>
+                                                        </div>
+                                                        <div class="nv-row bg-navy-blue nv-align-items-center">
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                                                <img class="img-left img-align-left" src="  ./images/img-3.png" />
+                                                            </div>
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 mar-v-5 text-center">
+                                                                <p class="text-small text-primary font-weight-bold">PROJECT: CASTAÑERO, PERU</p>
+                                                                <p class="text-small text-primary font-weight-bold">OFFSET: 20 TONS CO2E</p>
+                                                            </div>
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                                                <img class="img-left img-align-left" src="./images/logo/Certificate.png" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <div class="nv-col-10 nv-offset-1 pad-v-10 pad-h-20 cd-slideCard pad-b-10 bg-white">
+                                                        <div class="nv-d-flex nv-flex-column desktop:nv-flex-row nv-justify-content-between mar-b-5">
+                                                            <div class="pad-5 card-text">DATE: 25.10.2021</div>
+                                                            <div class="pad-5 card-text">CLIMAKEY: ORDER NUMBER HERE</div>
+                                                        </div>
+                                                        <div class="nv-row bg-navy-blue nv-align-items-center">
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                                                <img class="img-left img-align-left" src="  ./images/img-3.png" />
+                                                            </div>
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 mar-v-5 text-center">
+                                                                <p class="text-small text-primary font-weight-bold">PROJECT: CASTAÑERO, PERU</p>
+                                                                <p class="text-small text-primary font-weight-bold">OFFSET: 20 TONS CO2E</p>
+                                                            </div>
+                                                            <div class="tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                                                <img class="img-left img-align-left" src="./images/logo/Certificate.png" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nv-row mar-v-30 nv-align-items-center nv-justify-content-center">
+                                    <div class="tablet:nv-col-6 border-right-1 border-solid border-primary border-0 mobile:nv-col-12 mar-v-5 text-center">
+                                        <p class="text-small text-primary font-weight-bold">TOTAL EMISSIONS: 60 TONS OF CO2E</p>
+                                        <p class="text-small text-primary font-weight-bold">TOTAL OFFSETS: 20 TONS OF CO2E</p>
+                                    </div>
+                                    <div class="tablet:nv-col-6">
+                                        <div class="mar-t-0 mar-b-0 text-center">
+                                            <span class="rounded-circle cd-circle-60 mar-h-auto bg-orange text-white heading-3 border-1 border-solid border-light shadow-large">
+                                                85%
+                                            </span>
+                                            <p class="text-orange mar-t-15 mar-b-0">CARBON NEGATIVE</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nv-row text-center">
+                                    <div class="nv-col-12 desktop:nv-col-3 mar-b-30 tablet:mar-b-0">
+                                        <a href="#" class="text-decoration-none">
+                                            <img src="./images/svg/badge.svg" alt="Badge for the project" />
+                                            <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">BAdge</span>
+                                        </a>
+                                    </div>
+                                    <div class="nv-col-12 desktop:nv-col-9">
+                                        <div class="nv-d-flex nv-flex-wrap tablet:nv-flex-nowrap nv-justify-content-around tablet:nv-justify-content-between text-center">
+                                            <a href="#" class="text-decoration-none">
+                                                <img class="img-fluid" width="50" src="./images/svg/Report.svg" alt="Report for the project" />
+                                                <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">
+                                                    impact <br />
+                                                    report
+                                                </span>
+                                            </a>
+                                            <a href="#" class="text-decoration-none">
+                                                <img class="img-fluid" width="50" src="./images/svg/Document.svg" alt="Document for the project" />
+                                                <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">
+                                                    Retiration <br />
+                                                    Document
+                                                </span>
+                                            </a>
+                                            <a href="#" class="text-decoration-none">
+                                                <img class="img-fluid" width="50" src="./images/svg/Certificate.svg" alt="Certificate for the project" />
+                                                <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">Certificate</span>
+                                            </a>
+                                            <a href="#" class="text-decoration-none">
+                                                <img class="img-fluid" width="50" src="./images/svg/invoice.svg" alt="Invoice for the project" />
+                                                <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">Invoice</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./../build/cd-script.js"></script>
+
+        <script src="./js/splide.js"></script>
+
+        <script>
+            //var splide = new Splide('.splide');
+            //  splide.mount();
+            var splide = new Splide(".splide", {
+                type: "loop",
+                width: "100vw",
+                perPage: 1,
+            });
+
+            splide.on("pagination:mounted", function (data) {
+                // data.items contains all dot items
+                data.items.forEach(function (item) {
+                    item.button.textContent = String(item.page + 1);
+                });
+            });
+
+            splide.mount();
+
+            $(".cd-modal").on("shown.nv.modal", function (e) {
+                splide.update();
+            });
+        </script>
+        <!-- Load d3.js & color scale -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script>
+            //     function bigImg(p) {
+            //         // nv-d-none
+            //         console.log('ppp',p);
+            //         p.classList.add("nv-d-none");
+            //     }
+            // console.log('sssss',Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5));
+
+            // set the dimensions and margins of the graph
+            var width = 300;
+            height = 250;
+            margin = 10;
+
+            // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+            var radius = Math.min(width, height) / 2 - margin;
+
+            // append the svg object to the div called 'my_dataviz'
+            var svg = d3
+                .select("#chartdiv")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+            // Create dummy data
+            var data = { a: 9, b: 20, c: 30, d: 8, e: 12, f: 3, g: 7, h: 14 };
+
+            // set the color scale
+            var color = d3.scaleOrdinal().domain(["a", "b", "c", "d", "e", "f", "g", "h"]).range(d3.schemeDark2);
+
+            // Compute the position of each group on the pie:
+            var pie = d3
+                .pie()
+                .sort(null) // Do not sort group by size
+                .value(function (d) {
+                    return d.value;
+                });
+            var data_ready = pie(d3.entries(data));
+
+            // The arc generator
+            var arc = d3
+                .arc()
+                .innerRadius(radius * 0.6) // This is the size of the donut hole
+                .outerRadius(radius * 0.7);
+
+            // Another arc that won't be drawn. Just for labels positioning
+            var outerArc = d3
+                .arc()
+                .innerRadius(radius * 0.9)
+                .outerRadius(radius * 0.9);
+
+            // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+            svg.selectAll("allSlices")
+                .data(data_ready)
+                .enter()
+                .append("path")
+                .attr("d", arc)
+                .attr("fill", function (d) {
+                    return color(d.data.key);
+                })
+                .attr("stroke", "white")
+                .style("stroke-width", "2px")
+                .style("opacity", 0.7);
+            // .attr("id","ramya")
+            // .attr("onmouseover","bigImg(this)")
+            console.log("loop 1");
+
+            // Add the polylines between chart and labels:
+            svg.selectAll("allPolylines")
+                .data(data_ready)
+                .enter()
+                .append("polyline")
+                .attr("stroke", "black")
+                .style("fill", "none")
+                .attr("stroke-width", 1)
+                .attr("id", "yqube")
+                .attr("points", function (d) {
+                    var posA = arc.centroid(d); // line insertion in the slice
+                    var posB = outerArc.centroid(d); // line break: we use the other arc generator that has been built only for that
+                    var posC = outerArc.centroid(d); // Label position = almost the same as posB
+                    var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2; // we need the angle to see if the X position will be at the extreme right or extreme left
+                    posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
+                    return [posA, posB, posC];
+                });
+            console.log("loop 2");
+
+            // Add the polylines between chart and labels:
+            svg.selectAll("allLabels")
+                .data(data_ready)
+                .enter()
+                .append("text")
+                .text(function (d) {
+                    console.log(d.data.key);
+                    return d.data.key;
+                })
+                .attr("transform", function (d) {
+                    var pos = outerArc.centroid(d);
+                    var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2;
+                    pos[0] = radius * 0.99 * (midangle < Math.PI ? 1 : -1);
+                    return "translate(" + pos + ")";
+                })
+                .style("text-anchor", function (d) {
+                    var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2;
+                    return midangle < Math.PI ? "start" : "end";
+                });
+
+            svg.append("text")
+                .style("fill", "#000000")
+                .style("font-size", "14")
+                .style("font-weight", "bold")
+                .attr("transform", "translate(0," + 0 + ")")
+                .attr("text-anchor", "middle")
+                .html("99 TONS");
+            svg.append("text")
+                .style("fill", "#000000")
+                .style("font-size", "12")
+                .style("font-weight", "bold")
+                .attr("transform", "translate(0," + 30 + ")")
+                .attr("text-anchor", "middle")
+                .html("CO2 E");
+        </script>
+    </body>
+</html>
