@@ -1,0 +1,53 @@
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $tab-component-enable {
+    .nv-tab-panel .nv-tabs-header {
+        padding-bottom: 0.9375rem;
+        & [role="tab"] {
+            background-color: #ffffff;
+            border: 0;
+            border-bottom: 0.25rem solid #e8ecef;
+            padding: 10px 0.9375rem;
+            flex: 1 1 100%;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        & [role="tab"][aria-selected="true"] {
+            color: unquote('#' + map-get($text-colors-values-list, "secondary"));
+            border-bottom: 0.25rem solid unquote('#' + map-get($border-colors-values-list, "secondary"));
+            background: #e3f2e9;
+            font-weight: bold;          
+        }
+        & [role="tab"]:hover,
+        & [role="tab"]:focus,
+        & [role="tab"]:active {
+            color: unquote('#' + map-get($text-colors-values-list, "secondary"));
+            border-bottom: 0.25rem solid unquote('#' + map-get($border-colors-values-list, "secondary"));
+        
+        }
+        & .nv-d-block {
+            display: block !important;
+        }
+        @include media ("<desktop") {
+            & [role="tab"][aria-selected="false"] {
+                display: none;
+            }
+            & [role="tab"][aria-selected="true"] {
+                display: block;
+            }
+            & [role="tab"][aria-selected="true"]:after {
+                content: "\e259";
+                position: absolute;
+                top: 0.9375rem;
+                right: 0.9375rem;
+                display: inline-block;
+                font-family: 'Glyphicons Halflings';
+                font-style: normal;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+            }
+        }
+    }
+}

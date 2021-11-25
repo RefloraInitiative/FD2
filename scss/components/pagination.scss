@@ -1,0 +1,87 @@
+@import "./../customize/mixins";
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $pagination-component-enable {
+    .pagination {
+        & {
+            display: table;
+            padding-left: 0;
+            margin: 0.9375rem 0;
+            border-radius: 0;
+            list-style: none;
+            margin: 1.875rem 0.9375rem;
+        }
+        &.pagination-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &.pagination-right {
+            float: right;
+        }
+        & .page-item {
+            display: table-cell;
+        }
+        & a {
+            text-decoration: none !important;
+        }
+        & .page-link {
+            position: relative;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            margin-left: -0.0625rem;
+            line-height: 1.25;
+            background-color: #ffffff;
+            border: 0.0625rem solid unquote('#' + map-get($border-colors-values-list, "light"));
+            color: #337ab7;
+            font-size: 1rem;
+            white-space: nowrap;
+            &.page-link-space {
+                margin-right: 0.5rem;
+            }
+            &:hover {
+                z-index: 2;
+                color: #3455db;
+                text-decoration: none;
+                background: #f0f0f0;
+                text-decoration: underline !important;
+            }
+            & :focus {
+                z-index: 4;
+                outline: 0;
+                background: #f0f0f0;
+                color: unquote('#' + map-get($text-colors-values-list, "dark"));
+                @include box-shadow(0 0 0 0.2rem rgba(0, 123, 255, 0.25));
+            }
+            & span.hbicon {
+                font-size: 0.9375rem;
+                height: 1.25rem;
+                display: block;
+            }
+        }
+        & .page-item {
+            &:first-child .page-link {
+                margin-left: 0;
+            }
+            &.active .page-link {
+                z-index: 3;
+                background-color: #f0f0f0;
+                color: unquote('#' + map-get($text-colors-values-list, "dark"));
+            }
+            &.disabled .page-link {
+                color: #e1e1e1;
+                cursor: auto;
+                background-color: #ffffff;
+                cursor: not-allowed;
+            }
+        }
+        &.pagination-lg .page-link {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.25rem;
+        }
+        &.pagination-sm .page-link {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@import "./../customize/mixins";
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $alert-component-enable {
+    .nv-alert {
+        position: relative;
+        border: 0.0625rem solid transparent;
+        border-radius: 0;
+       @include display(block);
+        & a,
+        & a:hover {
+            color: inherit;
+        }
+    }
+    .nv-alert-dismissible .nv-close {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        font-size: 1.125rem;
+        font-weight: 100;
+        text-decoration: none;
+        position: absolute;
+        float: right;
+        right: 0;
+        cursor: pointer;
+        top: 0;
+        color: inherit;
+        z-index: 8;
+    }
+    .nv-alert-icons.nv-alert-dismissible .nv-close:after {
+        content: '\0031';
+        float: right;
+        @include transform(rotate(45deg));
+        font-family: 'HB_FONT';
+        font-size: 1.125rem;
+        right: -15px;
+        position: absolute;
+    }
+    .nv-alert-icons {
+        &:after,
+        &:before {
+            font-size: 1.25rem;
+            top: 15px;
+            position: absolute;
+        }
+        &-hb:after,
+        &-hb:before {
+            font-family: 'HB_FONT';
+        }
+        &-glyph:after,
+        &-glyph:before {
+            font-family: "Glyphicons Halflings";
+        }
+        &:before {
+            float: left;
+            left: 18px;
+        }
+    }
+    .nv-alert-icons.nv-alert-icons {
+        &-warning:before {
+            content: '\0021';
+        }
+        &-notification:before {
+            content: '\0026';
+        }
+        &-info:before {
+            content: '\0069';
+        }
+        &-success:before {
+            content: '\0078';
+        }
+        &-send:before {
+            content: "\e171";
+        }
+        &-fire:before {
+            content: "\e104";
+        }
+        &-time:before {
+            content: "\e023";
+        }
+        &-globe:before {
+            content: "\e135";
+        }
+        &-flag:before {
+            content: "\e034";
+        }
+        &-fire:before {
+            content: "\e104";
+        }
+    }
+    .nv-alert {
+        &-primary,
+        &-primary a {
+            color: #ffffff !important;
+            background-color: unquote('#' + map-get($background-colors-values-list, "primary"));
+            border-color: unquote('#' + map-get($border-colors-values-list, "primary"));
+        }
+        &-dark,
+        &-dark a {
+            color: #383d41;
+            background-color: #dddddd;
+            border-color: unquote('#' + map-get($border-colors-values-list, "light"));
+        }
+        &-warning,
+        &-warning a {
+            color: #ffffff;
+            background-color: #b30000;
+            border-color: unquote('#' + map-get($border-colors-values-list, "danger"));
+        }
+    }
+    @media (max-width: 1023px) {
+        .nv-alert-icons.nv-alert-dismissible .nv-close:after {
+            right: 15px;
+        }
+    }
+    @media (max-width: 639px) {
+        .nv-alert.nv-alert-icons:before {
+            display: none;
+        }
+    }
+}

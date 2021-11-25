@@ -1,0 +1,168 @@
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $popover-component-enable {
+    [data-toggle="popover"] {
+        cursor: pointer;
+    }
+    .nv-popover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1040;
+        display: block;
+        max-width: 17.25rem;
+        font-style: normal;
+        text-align: left;
+        text-align: start;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-break: normal;
+        word-spacing: normal;
+        white-space: normal;
+        line-break: auto;
+        font-size: 0.875rem;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 0.0625rem solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+    }
+    .nv-popover .arrow {
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 0.5rem;
+        margin: 0 0.3rem;
+        &::before,
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            border-color: transparent;
+            border-style: solid;
+        }
+    }
+    .nv-popover {
+        &-top,
+        &-auto[x-placement^="top"] {
+            margin-bottom: 0.5rem;
+        }
+        &-top>.arrow,
+        &-auto[x-placement^="top"]>.arrow {
+            bottom: calc(-0.5rem - 1px);
+        }
+        &-top>.arrow::before,
+        &-auto[x-placement^="top"]>.arrow::before {
+            bottom: 0;
+            border-width: 0.5rem 0.5rem 0;
+            border-top-color: rgba(0, 0, 0, 0.25);
+        }
+        &-top>.arrow::after,
+        &-auto[x-placement^="top"]>.arrow::after {
+            bottom: 1px;
+            border-width: 0.5rem 0.5rem 0;
+            border-top-color: #fff;
+        }
+        &-right,
+        &-auto[x-placement^="right"] {
+            margin-left: 0.5rem;
+        }
+        &-right>.arrow,
+        &-auto[x-placement^="right"]>.arrow {
+            left: calc(-0.5rem - 1px);
+            width: 0.5rem;
+            height: 1rem;
+            margin: 0.3rem 0;
+        }
+        &-right>.arrow::before,
+        &-auto[x-placement^="right"]>.arrow::before {
+            left: 0;
+            border-width: 0.5rem 0.5rem 0.5rem 0;
+            border-right-color: rgba(0, 0, 0, 0.25);
+        }
+        &-right>.arrow::after,
+        &-auto[x-placement^="right"]>.arrow::after {
+            left: 1px;
+            border-width: 0.5rem 0.5rem 0.5rem 0;
+            border-right-color: #fff;
+        }
+        &-bottom,
+        &-auto[x-placement^="bottom"] {
+            margin-top: 0.5rem;
+        }
+        &-bottom>.arrow,
+        &-auto[x-placement^="bottom"]>.arrow {
+            top: calc(-0.5rem - 1px);
+        }
+        &-bottom>.arrow::before,
+        &-auto[x-placement^="bottom"]>.arrow::before {
+            top: 0;
+            border-width: 0 0.5rem 0.5rem 0.5rem;
+            border-bottom-color: rgba(0, 0, 0, 0.25);
+        }
+        &-bottom>.arrow::after,
+        &-auto[x-placement^="bottom"]>.arrow::after {
+            top: 1px;
+            border-width: 0 0.5rem 0.5rem 0.5rem;
+            border-bottom-color: #fff;
+        }
+        &-bottom .popover-header::before,
+        &-auto[x-placement^="bottom"] .popover-header::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: 1rem;
+            margin-left: -0.5rem;
+            content: "";
+            border-bottom: 1px solid #f7f7f7;
+        }
+        &-left,
+        &-auto[x-placement^="left"] {
+            margin-right: 0.5rem;
+        }
+        &-left>.arrow,
+        &-auto[x-placement^="left"]>.arrow {
+            right: calc(-0.5rem - 1px);
+            width: 0.5rem;
+            height: 1rem;
+            margin: 0.3rem 0;
+        }
+        &-left>.arrow::before,
+        &-auto[x-placement^="left"]>.arrow::before {
+            right: 0;
+            border-width: 0.5rem 0 0.5rem 0.5rem;
+            border-left-color: rgba(0, 0, 0, 0.25);
+        }
+        &-left>.arrow::after,
+        &-auto[x-placement^="left"]>.arrow::after {
+            right: 1px;
+            border-width: 0.5rem 0 0.5rem 0.5rem;
+            border-left-color: #fff;
+        }
+    }
+    .nv-popover-header {
+        padding: 0.5rem 0.75rem;
+        margin: 0 auto;
+        font-size: 1rem;
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #ebebeb;
+        border-top-left-radius: calc(0.3rem - 1px);
+        border-top-right-radius: calc(0.3rem - 1px);
+        &:empty {
+            display: none;
+        }
+    }
+    .nv-popover-body {
+        padding: 0.5rem 0.75rem;
+        color: unquote('#' + map-get($text-colors-values-list, "dark"));
+        & img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+    }
+}

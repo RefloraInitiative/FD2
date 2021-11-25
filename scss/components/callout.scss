@@ -1,0 +1,39 @@
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $callout-component-enable {
+    .nv-callout {
+        margin: 0 0 1.875rem;
+        border-left: 0.25rem solid transparent;
+        padding: 1.25rem 1.25rem 1.25rem 1.875rem;
+        font-size: 1rem;
+        font-family: unquote($font-family-callout);
+        color: unquote('#' + map-get($text-colors-values-list, "dark"));
+        &-primary {
+            border-color: unquote('#' + map-get($border-colors-values-list, "primary")) !important;
+        }
+        &-secondary {
+            border-color: #DA6416 !important;
+        }
+        &-dark {
+            border-color: #333333 !important;
+        }
+        &-light {
+            border-color: unquote('#' + map-get($border-colors-values-list, "light")) !important;
+        }
+        &-warning {
+            border-color: #b40000 !important;
+        }
+        &-border {
+            border-left: 0.25rem solid transparent;
+            border-right: 0.0625rem solid transparent;
+            border-top: 0.0625rem solid transparent;
+            border-bottom: 0.0625rem solid transparent;
+        }
+        @include media(">=320px") {
+            & {
+                font-size: 1.3125rem;
+            }
+        }
+    }
+}

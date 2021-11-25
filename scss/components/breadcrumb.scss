@@ -1,0 +1,56 @@
+@import "./../customize/mixins";
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $breadcrumb-component-enable {
+    .nv-breadcrumb {
+        & ol {
+            list-style: none;
+        }
+        & ol:before {
+            font-weight: 500;
+            margin-top: 3px;
+        }
+        & ol li:before {
+            content: '\203A';
+            @include media("<desktop") {
+                & {
+                    align-self: center;
+                }
+            }
+            @include media(">=desktop") {
+                & {
+                    padding-top: 5px;
+                }
+            }
+        }
+        & ol li:first-child:before {
+            display: none;
+        }
+        & ol li {
+            display: inline-block;
+            display: flex;
+            @include media("<desktop") {
+                & {
+                    margin: auto 0;
+                }
+            }
+        }
+        & ol li a {
+            padding: 0.313rem 0.625rem 0.313rem 0.313rem;
+        }
+        & ol li:first-child a {
+            padding-left: 0 !important;
+        }
+        & ol li a.active,
+        & ol li a.active:hover {
+            text-decoration: none;
+            font-weight: bold;
+            color: unquote('#' + map-get($text-colors-values-list, "dark"));
+        }
+    }
+    .nv-breadcrumb ol li:before {
+        content: '\203A';
+        align-self: center;
+    }
+}

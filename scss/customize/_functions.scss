@@ -1,0 +1,15 @@
+@function offset-percentage($percentage, $nv-offset-end) {
+    @return percentage($percentage/$nv-offset-end);
+}
+
+@function column-percentage($percentage, $nv-offset-end) {
+    @return percentage($percentage/$nv-offset-end);
+}
+@function width-percentage($percentage) {
+    @return percentage($percentage/$nv-width-end);
+}
+
+// @function calculateRem($size) {
+//     $remSize: $size / 16px;
+//     @return $remSize * 1rem;
+// }

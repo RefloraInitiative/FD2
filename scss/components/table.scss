@@ -1,0 +1,261 @@
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $table-component-enable {
+    // .table {
+    //     width: 100%;
+    //     margin-bottom: 1rem;
+    //     color: #212529;
+    //     & th,
+    //     & td {
+    //         padding: 0.75rem;
+    //         vertical-align: top;
+    //         border-top: 1px solid unquote('#' + map-get($border-colors-values-list, "light"));
+    //     }
+    //     & thead th {
+    //         vertical-align: top;
+    //         border-bottom: 2px solid unquote('#' + map-get($border-colors-values-list, "light"));
+    //     }
+    //     & tbody+tbody {
+    //         border-top: 2px solid unquote('#' + map-get($border-colors-values-list, "light"));
+    //     }
+    //     &-sm th,
+    //     &-sm td {
+    //         padding: 0.3rem;
+    //     }
+    // }
+    // .table-bordered,
+    // .table-bordered th,
+    // .table-bordered td {
+    //     border: 1px solid unquote('#' + map-get($border-colors-values-list, "light"));
+    // }
+    // .table-bordered thead th,
+    // .table-bordered thead td {
+    //     border-bottom-width: 2px;
+    // }
+    // .table-borderless th,
+    // .table-borderless td,
+    // .table-borderless thead th,
+    // .table-borderless tbody+tbody {
+    //     border: 0;
+    // }
+    // .table-striped tbody tr:nth-of-type(odd) {
+    //     background-color: rgba(0, 0, 0, 0.05);
+    // }
+    // .table-hover tbody tr:hover {
+    //     color: #212529;
+    //     background-color: rgba(0, 0, 0, 0.075);
+    // }
+    // .table-primary {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: #b8daff;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #7abaff;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #9fcdff;
+    //     }
+    // }
+    // .table-secondary {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: #d6d8db;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #b3b7bb;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #c8cbcf;
+    //     }
+    // }
+    // .table-success {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: #c3e6cb;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #8fd19e;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #b1dfbb;
+    //     }
+    // }
+    // .table-info {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: #bee5eb;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #86cfda;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #abdde5;
+    //     }
+    // }
+    // .table-warning {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: #ffeeba;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #ffdf7e;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #ffe8a1;
+    //     }
+    // }
+    // .table-danger {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: #f5c6cb;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #ed969e;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #f1b0b7;
+    //     }
+    // }
+    // .table-light {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: #fdfdfe;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #fbfcfc;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #ececf6;
+    //     }
+    // }
+    // .table-dark {
+    //     color: #ffffff;
+    //     background-color: #343a40;
+    //     &>th,
+    //     &>td {
+    //         background-color: #c6c8ca;
+    //     }
+    //     th,
+    //     td,
+    //     thead th,
+    //     tbody+tbody {
+    //         border-color: #454d55;
+    //     }
+    //     .table-hover &:hover,
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: #b9bbbe;
+    //     }
+    //     &.table-bordered {
+    //         border: 0;
+    //     }
+    //     &.table-striped tbody tr:nth-of-type(odd) {
+    //         background-color: rgba(255, 255, 255, 0.05);
+    //     }
+    //     &.table-hover tbody tr:hover {
+    //         color: #ffffff;
+    //         background-color: rgba(255, 255, 255, 0.075);
+    //     }
+    // }
+    // .table-active {
+    //     &,
+    //     &>th,
+    //     &>td {
+    //         background-color: rgba(0, 0, 0, 0.075);
+    //     }
+    //     &>th,
+    //     &>td .table-hover &:hover {
+    //         background-color: rgba(0, 0, 0, 0.075);
+    //     }
+    //     .table-hover &:hover>td,
+    //     .table-hover &:hover>th {
+    //         background-color: rgba(0, 0, 0, 0.075);
+    //     }
+    // }
+    // .table .thead-primary th {
+    //     color: unquote('#' + map-get($text-colors-values-list, "dark"));
+    //     background-color: #f0f0f0;
+    //     border-color: unquote('#' + map-get($border-colors-values-list, "light"));
+    //     padding: 1.25rem;
+    // }
+    // .table .thead-light th {
+    //     color: #495057;
+    //     background-color: #e9ecef;
+    //     border-color: unquote('#' + map-get($border-colors-values-list, "light"));
+    // }
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        &>.table-bordered {
+            border: 0;
+        }
+        @include media("<desktop") {
+            &-lg {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            &-lg>.table-bordered {
+                border: 0;
+            }
+        }
+        @include media("<tablet") {
+            &-md {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            &-md>.table-bordered {
+                border: 0;
+            }
+        }
+    }
+}

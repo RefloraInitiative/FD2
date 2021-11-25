@@ -1,0 +1,53 @@
+@import "./../customize/mixins";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $accordion-component-enable {
+    /* //////////////////////    COMMON STYLE START      /////////////////////////////// */
+    .collapse:not(.show) {
+        display: none;
+    }
+    [class*="nv-accordion-"] {
+        & > span[class*="bi-"] {
+            font-size: 1.2rem;
+            &::before {
+                font-weight: bolder !important;
+                font-size: 1.3rem;
+            }
+        }
+        & [aria-expanded="true"] > span[class*="bi-"] {
+            transform: rotate(-180deg);
+            transition: all 0.015s ease;
+            top: -4px;
+            position: relative;
+        }
+        & [aria-expanded="false"] > span[class*="bi-"] {
+            transform: rotate(0deg);
+            transition: all 0.015s ease;
+        }
+        & .nv-accordion-item .nv-accordion-item-body {
+            transition: all 0.15s ease;
+            overflow: hidden;
+            border-width: 1.9px !important;
+            border-style: solid;
+            border-top: transparent !important;
+            transition: all 0.15s ease;
+            overflow: hidden;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        & .nv-accordion-item .nv-accordion-item-label {
+            text-decoration: none;
+            font-weight: bold;         
+            border-radius: 10px;
+            border-width: 1.9px !important;
+            border-style: solid;
+        }
+        & .nv-accordion-item .nv-accordion-item-label[aria-expanded="true"] {
+         
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    /* //////////////////////    COMMON STYLE START     /////////////////////////////// */
+}

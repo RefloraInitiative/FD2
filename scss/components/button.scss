@@ -1,0 +1,55 @@
+@import "./../customize/mixins";
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $button-component-enable {
+    .btn {
+        @include display(flex);
+        color: #000;
+        background-color: transparent;
+        font-size: 1rem;
+      
+        text-transform: uppercase;
+        border-radius: 0;
+        font-weight: bold;
+        cursor: pointer;
+        @include align-items(center);
+        border: 2px solid transparent;
+        @include button_custom_properties;
+        &.btn-small {
+            font-size: 1rem;
+        }
+        &.btn-medium {
+            font-size: 1.125rem;
+        }
+        &.btn-large {
+            font-size: 1.5rem;
+        }
+        &.btn-fluid {
+            width: 100%;
+        }
+        &.btn-rounded{
+            border-radius: 30px;
+        }
+        &.btn-underline-hover:hover {
+            text-decoration: underline !important;
+        }
+        &.btn-center {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        &.btn-primary {
+          @include button_primary;
+        }
+        &.btn-secondary {
+          @include button_secondary;
+        }
+        &.btn-primary-inverted {
+         @include button_primary_inverted;
+        }
+        &.btn-secondary-inverted {
+         @include button_secondary_inverted;
+        }
+        
+    }
+}

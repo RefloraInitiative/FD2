@@ -1,0 +1,615 @@
+@import "./../customize/mixins";
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $form-component-enable {
+    /* password icon */
+    .form-group span.glyphicon.glyphicon-eye-close,
+    .form-group span.glyphicon.glyphicon-eye-open {
+        position: relative;
+        float: right;
+        right: 10px;
+        top: -30px;
+    }
+    /* form validation */
+    .form-required-message {
+        font-size: 14px;
+        line-height: 1.1;
+    }
+    .form-required::after {
+        // display: inline-block;
+        // width: 6px;
+        // height: 6px;
+        // margin: 0 0.3em;
+        // vertical-align: super;
+        // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23"+$form-invalid-color+"' class='bi bi-asterisk' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z'/%3E%3C/svg%3E");
+        // background-repeat: no-repeat;
+        // background-size: 6px 6px;
+        content: "*";
+        color:unquote(  '#' +  $form-invalid-color) !important;
+    }
+    .invalid .form-required-icon:after {
+        display: inline-block;
+    }
+    .form-required-icon:after {
+        content: "\e014";
+        font-family: "Glyphicons Halflings";
+        position: absolute;
+        margin-left: 15px;
+        display: none;
+    }
+    .form-group .error-message {
+        display: none;
+        margin-top: 5px;
+    }
+    .form-group.invalid .error-message {
+        display: block;
+    }
+    /* .invalid, */
+    ul.error-message-list li.invalid,
+    .form-group.invalid label,
+    .form-group.invalid .error-message,
+    .form-group.invalid span.glyphicon.glyphicon-eye-close,
+    .form-group.invalid span.glyphicon.glyphicon-eye-open {
+        color:unquote(  '#' +  $form-invalid-color) !important;
+    }
+    .form-group.invalid input,
+    .form-group.invalid textarea,
+    .form-group.invalid select,
+    .form-group.invalid .btn-group .btn,
+    .form-group.invalid .select2-container--default .select2-selection--single {
+        border:  2px solid unquote('#' +  $form-invalid-color) !important;
+    }
+    /* form styles */
+    form {
+        color: unquote('#' + map-get($text-colors-values-list, "dark")) !important;
+    }
+    .form-item {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 2.5rem !important;
+        font-size: 1rem;
+        color: #495057;
+        background-color: #ffffff;
+        background-clip: padding-box;
+        border: 1px solid unquote('#' + map-get($border-colors-values-list, "medium"));
+        // border-radius: 0 !important;
+        -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        text-indent: .845rem;
+    }
+    input[type="date"].form-control {
+        text-indent: .4rem;
+    }
+    .form-control.rounded-pill {
+        border-radius: 50rem !important;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .form-control {
+            @include transition(none);
+        }
+    }
+    .form-control::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+    .form-control:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #495057;
+    }
+    .form-control:focus {
+        color: #495057;
+        background-color: #ffffff;
+        border-color: #80bdff;
+        outline: 0;
+        @include box-shadow( 0 0 0 0.2rem rgba(0, 123, 255, 0.25));
+    }
+    .form-control::-webkit-input-placeholder,
+    .form-control:-ms-input-placeholder,
+    .form-control::-ms-input-placeholder,
+    .form-control::placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+    .form-control:disabled,
+    .form-control[readonly] {
+        background-color: #e9ecef;
+        opacity: 1;
+    }
+    select.form-control:focus::-ms-value {
+        color: #495057;
+        background-color: #ffffff;
+    }
+    .form-control-file,
+    .form-control-range {
+        display: block;
+        width: 100%;
+    }
+    .form-control-plaintext.form-control-sm,
+    .form-control-plaintext.form-control-lg {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .form-control-sm {
+        min-height: 1.875rem !important;
+        font-size: 0.875rem !important;
+        height: auto !important;
+    }
+    .form-control-lg {
+        min-height: auto !important;
+        height: 3rem !important;
+        font-size: 1.25rem !important;
+        /* height: auto !important; */
+    }
+    select.form-control[size],
+    select.form-control[multiple],
+    textarea.form-control {
+        height: auto;
+    }
+    .form-group {
+        margin-bottom: 0.9375rem;
+    }
+    .form-group label {
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+    .form-text {
+        display: block;
+        margin-top: 0.25rem;
+    }
+    .form-check {
+        position: relative;
+        display: block;
+        padding-left: 1.25rem;
+        margin-bottom: 0.3125rem;
+    }
+    .form-check-input {
+        position: absolute;
+        margin-top: 0.1875rem;
+        margin-left: -1.25rem;
+    }
+    .form-check-input[disabled]~.form-check-label,
+    .form-check-input:disabled~.form-check-label {
+        color: #6c757d;
+    }
+    .form-check-label {
+        margin-bottom: 0 !important;
+    }
+    .form-check-inline {
+        @include display(inline-flex);
+        @include align-items(center);
+        padding-left: 0;
+        margin-right: 0.75rem;
+    }
+    .form-check-inline .form-check-input {
+        position: static;
+        margin-top: 0;
+        margin-right: 0.3125rem;
+        margin-left: 0;
+    }
+    .form-inline {
+        @include display(flex);
+        @include align-items(center);
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+    }
+    .form-inline .form-check {
+        width: 100%;
+    }
+    /* select 2 library css overide */
+    .select2-container--open .select2-dropdown--below {
+        margin-top: 0px;
+    }
+    .select2-container--default .select2-selection--single {
+        height: 2.5rem !important;
+        border-radius: 0px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 0.35rem;
+    }
+    .search-section-input .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        display: none !important;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        margin-top: 1px !important;
+    }
+    .select2-container--default .select2-results__option[aria-selected=true] {
+        background-color: #FFF;
+    }
+    .select2-container--default .select2-results__option--highlighted[aria-selected] {
+        background-color: unquote('#' + map-get($background-colors-values-list, "primary")) !important;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        padding-left: .845rem;
+        background: #fff;
+        @include display(flex);
+        @include align-items(center);
+        height: 100%;
+        padding-top: 10px;
+        color: #b1b4b5 !important;
+    }
+    span.select2-selection.select2-selection--single {
+        border-radius: 0px;
+        padding: 0;
+    }
+    .select2-search--dropdown .select2-search__field {
+        padding: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        display: none;
+    }
+    .select2-container--default .select2-results__option--highlighted[aria-selected] {
+        background-color: unquote('#' + map-get($background-colors-values-list, "primary")) !important;
+        color: white;
+    }
+    .select2-container--default .select2-results__option[aria-selected=true] {
+        background-color: unquote('#' + map-get($background-colors-values-list, "primary")) !important;
+        color: #fff;
+    }
+    .select2-container--open .select2-dropdown--below {
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-radius: 0;
+        @include box-shadow( 0px 8px 7px 5px #00000059);
+    }
+    .select2-container--default .select2-results>.select2-results__options {
+        max-height: 350px !important;
+        overflow: auto !important;
+        border-radius: 0;
+    }
+    .select2-search--dropdown {
+        display: none !important;
+    }
+    .select2 .select2-container .select2-container--default {
+        display: none;
+    }
+    .select2-dropdown {
+        z-index: 10711;
+        margin-top: -.3rem;
+    }
+    .select2-container {
+        display: block;
+        // margin-top: .3rem;
+    }
+    .select2-container--default {
+        font-size: 1rem !important;
+        color: unquote('#' + map-get($text-colors-values-list, "dark"));
+    }
+    .select2-container--default .select2-selection--single {
+        border: 1px solid unquote('#' + map-get($border-colors-values-list, "medium"));
+    }
+    .nv-custom-select.form-control-lg~.select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: .5rem;
+    }
+    .nv-custom-select.form-control-lg~.select2-container--default .select2-selection--single {
+        height: 3rem !important;
+    }
+    // .nv-custom-select.form-control-lg~.select2-container--default .select2-selection--single .select2-selection__rendered {
+    //     line-height: 50px !important;
+    // }
+    /*-----------------------------min width media queries starts------------------------------------*/
+    @media (min-width: 320px) {
+        .form-inline label {
+            @include display(flex);
+            @include align-items(center);
+            @include justify-content(center);
+            margin-bottom: 0;
+        }
+        .form-inline .form-group {
+            @include display(flex);
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            @include align-items(center);
+            margin-bottom: 0;
+        }
+        .form-inline .form-control {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+        }
+        .form-inline .input-group,
+        .form-inline .custom-select {
+            width: auto;
+        }
+        .form-inline .form-check {
+            @include display(flex);
+            @include align-items(center);
+            @include justify-content(center);
+            width: auto;
+            padding-left: 0;
+        }
+        .form-inline .form-check-input {
+            position: relative;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            margin-top: 0;
+            margin-right: 0.25rem;
+            margin-left: 0;
+        }
+    }
+    @media screen\0 {
+        select.form-control {
+            padding-left: .845rem;
+            ;
+        }
+    }
+    @media (max-width: 1023px) {
+        .form-control-lg {
+            font-size: .95rem !important;
+        }
+    }
+    /*-----------------------------min width media queries end------------------------------------*/
+
+    // floating label starts
+    
+[dir=rtl] .floating-label > input + label,
+[dir=rtl] .floating-label > textarea + label {
+  right: 0;
+  left: auto !important;
+}
+[dir=rtl] .floating-label > input:not([placeholder]):not([value]) + label,
+[dir=rtl] .floating-label > textarea:not([placeholder]):empty + label, [dir=rtl] .floating-label > input[placeholder]:not(:placeholder-shown) + label,
+[dir=rtl] .floating-label > textarea[placeholder]:not(:placeholder-shown) + label, [dir=rtl] .floating-label > input:-webkit-autofill + label,
+[dir=rtl] .floating-label > textarea:-webkit-autofill + label, [dir=rtl] .floating-label > input:focus + label,
+[dir=rtl] .floating-label > textarea:focus + label, [dir=rtl] .floating-label > select + label {
+  right: 0.5rem;
+  left: auto !important;
+}
+
+.floating-label {
+  position: relative;
+}
+.floating-label > select + label {
+  position: absolute;
+  z-index: 3;
+  max-width: calc(100% - 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  line-height: 1.25;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+.floating-label > select + label,
+.floating-label > select + label.label-sm {
+  top: -0.65625rem;
+  font-size: 0.875rem;
+}
+.floating-label > select + label.label-md {
+  top: -0.75rem;
+  font-size: 1rem;
+}
+.floating-label > select + label.label-lg {
+  top: -0.9375rem;
+  font-size: 1.25rem;
+}
+.floating-label > input + label,
+.floating-label > textarea + label {
+  position: absolute;
+  z-index: 3;
+  max-width: calc(100% - 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 1px;
+  left: 1px;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  color: #6c757d;
+  pointer-events: none;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.floating-label > input.form-control-sm + label,
+.floating-label > textarea.form-control-sm + label {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+}
+.floating-label > input.form-control-lg + label,
+.floating-label > textarea.form-control-lg + label {
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+.floating-label > input::placeholder,
+.floating-label > textarea::placeholder {
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.floating-label > label + input::placeholder,
+.floating-label > label + textarea::placeholder {
+  color: #6c757d;
+}
+.floating-label > input:focus::placeholder,
+.floating-label > textarea:focus::placeholder {
+  color: #6c757d;
+}
+.floating-label > input:focus + label,
+.floating-label > input.focus + label,
+.floating-label > textarea:focus + label {
+  position: absolute;
+  z-index: 3;
+  max-width: calc(100% - 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  line-height: 1.25;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+.floating-label > input:focus + label,
+.floating-label > input.focus + label,
+.floating-label > input:focus + label.label-sm,
+.floating-label > textarea:focus + label,
+.floating-label > textarea:focus + label.label-sm {
+  top: -0.65625rem;
+  font-size: 0.875rem;
+  color: #b1b4b5 !important;
+}
+.floating-label > input:focus + label.label-md,
+.floating-label > textarea:focus + label.label-md {
+  top: -0.75rem;
+  font-size: 1rem;
+}
+.floating-label > input:focus + label.label-lg,
+.floating-label > textarea:focus + label.label-lg {
+  top: -0.9375rem;
+  font-size: 1.25rem;
+
+}
+
+.floating-label > input:-webkit-autofill + label,
+.floating-label > textarea:-webkit-autofill + label {
+  position: absolute;
+  z-index: 3;
+  max-width: calc(100% - 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  line-height: 1.25;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+.floating-label > input:-webkit-autofill + label,
+.floating-label > input:-webkit-autofill + label.label-sm,
+.floating-label > textarea:-webkit-autofill + label,
+.floating-label > textarea:-webkit-autofill + label.label-sm {
+  top: -0.65625rem;
+  font-size: 0.875rem;
+}
+.floating-label > input:-webkit-autofill + label.label-md,
+.floating-label > textarea:-webkit-autofill + label.label-md {
+  top: -0.75rem;
+  font-size: 1rem;
+}
+.floating-label > input:-webkit-autofill + label.label-lg,
+.floating-label > textarea:-webkit-autofill + label.label-lg {
+  top: -0.9375rem;
+  font-size: 1.25rem;
+}
+
+.floating-label > input[placeholder]:not(:placeholder-shown) + label,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label {
+  position: absolute;
+  z-index: 3;
+  max-width: calc(100% - 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  line-height: 1.25;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+.floating-label > input[placeholder]:not(:placeholder-shown) + label,
+.floating-label > input[placeholder]:not(:placeholder-shown) + label.label-sm,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label.label-sm {
+  top: -0.65625rem;
+  font-size: 0.875rem;
+}
+.floating-label > input[placeholder]:not(:placeholder-shown) + label.label-md,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label.label-md {
+  top: -0.75rem;
+  font-size: 1rem;
+}
+.floating-label > input[placeholder]:not(:placeholder-shown) + label.label-lg,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label.label-lg {
+  top: -0.9375rem;
+  font-size: 1.25rem;
+}
+.floating-label > input:not([placeholder]):not([value]) + label,
+.floating-label > textarea:not([placeholder]):empty + label {
+  position: absolute;
+  z-index: 3;
+  max-width: calc(100% - 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  line-height: 1.25;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+.floating-label > input:not([placeholder]):not([value]) + label,
+.floating-label > input:not([placeholder]):not([value]) + label.label-sm,
+.floating-label > textarea:not([placeholder]):empty + label,
+.floating-label > textarea:not([placeholder]):empty + label.label-sm {
+  top: -0.65625rem;
+  font-size: 0.875rem;
+  color:#b1b4b5;
+}
+.floating-label > input:not([placeholder]):not([value]) + label.label-md,
+.floating-label > textarea:not([placeholder]):empty + label.label-md {
+  top: -0.75rem;
+  font-size: 1rem;
+}
+.floating-label > input:not([placeholder]):not([value]) + label.label-lg,
+.floating-label > textarea:not([placeholder]):empty + label.label-lg {
+  top: -0.9375rem;
+  font-size: 1.25rem;
+}
+
+.input-group > .floating-label {
+  flex: 1;
+}
+.input-group > .floating-label > .form-control,
+.input-group > .floating-label > .form-select {
+  position: relative;
+}
+.input-group > .floating-label > .form-control:focus,
+.input-group > .floating-label > .form-select:focus {
+  z-index: 3;
+}
+.input-group > .floating-label:not(:first-child) > .form-control,
+.input-group > .floating-label:not(:first-child) > .form-select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group > .floating-label:not(:last-child) > .form-control,
+.input-group > .floating-label:not(:last-child) > .form-select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+span.select2.select2-container+label {
+    position: absolute;
+    z-index: 3;
+    background:#fff;
+    max-width: calc(100% - 2px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom:0;
+    height: 26px;
+    left: 10px;
+    color:#b1b4b5;
+    padding: .375rem .75rem;
+    pointer-events: none;
+    transition: all 150ms cubic-bezier(0.4,0,0.2,1);
+    top: -0.8rem !important;
+    font-size: .875rem !important;
+  }
+// floating label ends
+}

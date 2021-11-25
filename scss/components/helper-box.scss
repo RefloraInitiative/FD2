@@ -1,0 +1,53 @@
+@import "./../customize/mixins";
+// @import "./../customize/components";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $helper-component-enable {
+    /*----------------------------Helper Section Start------------------------*/
+    .nv-helper-section {
+        & .nv-helper-section-block {
+            position: fixed;
+            z-index: 9999;
+            bottom: 25%;
+        }
+        & .nv-helper-button {
+            border-radius: 4px;
+            font-size: 1.5rem;
+            width: 43px;
+            height: 43px;
+            padding: 3px;
+            border: 1px solid #FFAB2B !important;
+        }
+        & .nv-helper-box {
+            display: none;
+            border: 1px solid #FFAB2B !important;
+            border-radius: 0.5555555555555556rem;
+            & .nv-helper-box-header {
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+            & .nv-helper-box-header .nv-helper-icon {
+                font-size: 2rem;
+                line-height: 1;
+                padding-right: 10px;
+            }
+            & .nv-helper-box-header .icon-phrase .nv-helper-icon,
+            & .nv-helper-box-header .icon-phrase .nv-helper-icon-text {
+                vertical-align: middle;
+            }
+            & .nv-helper-box-body {
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+        }
+        & .nv-helper-section-block {
+            right: 30px;
+        }
+        @media (min-width: 1024px) {
+            & .nv-helper-section-block {
+                right: 50px;
+            }
+        }
+    }
+    /*----------------------------Helper Section End------------------------*/
+}

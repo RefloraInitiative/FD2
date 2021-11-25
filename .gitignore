@@ -1,8 +1,3 @@
 node_modules
-css/components
-css/libraries
-js
-scss
 gulpfile.js
-package-lock.json
 package.json

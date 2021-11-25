@@ -1,0 +1,123 @@
+@import "./../customize/mixins";
+@import "./../customize/base-style";
+@import "./../customize/media-query";
+@if $tooltip-component-enable {
+    @include media(">=desktop") {
+        .nv-tooltip.show,
+        .fade.in {
+            opacity: 1;
+        }
+    }
+    @include media("<=desktop") {
+        .nv-tooltip.show,
+        .fade.in {
+            display: none;
+        }
+    }
+    .nv-tooltip {
+        position: absolute;
+        z-index: 1050;
+        @include display(block);
+        margin: 0;
+        font-style: normal;
+        line-height: 1.5;
+        text-align: left;
+        text-align: start;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-break: normal;
+        word-spacing: normal;
+        white-space: normal;
+        line-break: auto;
+        font-size: 0.875rem;
+        word-wrap: break-word;
+        opacity: 0;
+        &.in {
+            filter: alpha(opacity=95);
+            opacity: 0.95;
+        }
+        .arrow {
+            position: absolute;
+            @include display(block);
+            width: 0.8rem;
+            height: 0.4rem;
+        }
+        .arrow::before {
+            position: absolute;
+            content: "";
+            border-color: transparent;
+            border-style: solid;
+        }
+        &-top,
+        &-auto[x-placement^="top"] {
+            padding: 0.4rem 0;
+        }
+        &-top .arrow,
+        &-auto[x-placement^="top"] .arrow {
+            bottom: 0;
+        }
+        &-top .arrow::before,
+        &-auto[x-placement^="top"] .arrow::before {
+            top: 0;
+            border-width: 0.4rem 0.4rem 0;
+            border-top-color: unquote("#" + map-get($border-colors-values-list, "light"));
+        }
+        &-right,
+        &-auto[x-placement^="right"] {
+            padding: 0 0.4rem;
+        }
+        &-right .arrow,
+        &-auto[x-placement^="right"] .arrow {
+            left: 0;
+            width: 0.4rem;
+            height: 0.8rem;
+        }
+        &-right .arrow::before,
+        &-auto[x-placement^="right"] .arrow::before {
+            right: 0;
+            border-width: 0.4rem 0.4rem 0.4rem 0;
+            border-right-color: unquote("#" + map-get($border-colors-values-list, "light"));
+        }
+        &-bottom,
+        &-auto[x-placement^="bottom"] {
+            padding: 0.4rem 0;
+        }
+        &-bottom .arrow,
+        &-auto[x-placement^="bottom"] .arrow {
+            top: 0;
+        }
+        &-bottom .arrow::before,
+        &-auto[x-placement^="bottom"] .arrow::before {
+            bottom: 0;
+            border-width: 0 0.4rem 0.4rem;
+            border-bottom-color: unquote("#" + map-get($border-colors-values-list, "light"));
+        }
+        &-left,
+        &-auto[x-placement^="left"] {
+            padding: 0 0.4rem;
+        }
+        &-left .arrow,
+        &-auto[x-placement^="left"] .arrow {
+            right: 0;
+            width: 0.4rem;
+            height: 0.8rem;
+        }
+        &-left .arrow::before,
+        &-auto[x-placement^="left"] .arrow::before {
+            left: 0;
+            border-width: 0.4rem 0 0.4rem 0.4rem;
+            border-left-color: unquote("#" + map-get($border-colors-values-list, "light"));
+        }
+        &-inner {
+            max-width: 12.5rem;
+            padding: 0.25rem 0.5rem;
+            color: #000;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 0.25rem;
+            border: 1px solid unquote("#" + map-get($border-colors-values-list, "light"));
+        }
+    }
+}
