@@ -738,7 +738,6 @@
     </footer>
 
     <script src="./../build/cd-script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./js/modernizr.min.js"></script>
     <script src="./js/js-offcanvas.pkgd.min.js"></script>
     <script src="./js/off-canvas.js"></script>
@@ -748,7 +747,6 @@
     <script>
         // modal slider
         var splideModal = new Splide('.splide.modal', {
-            type: "loop",
             width: "100vw",
             perPage: 1,
         });
@@ -758,22 +756,7 @@
         splideModal.mount();
 
 
-        // var splide = new Splide(".splide", {
-        //     type: "loop",
-        //     width: "100vw",
-        //     perPage: 1,
-        // });
-
-        // splide.on("pagination:mounted", function (data) {
-        //     // data.items contains all dot items
-        //     data.items.forEach(function (item) {
-        //         item.button.textContent = String(item.page + 1);
-        //     });
-        // });
-
-        // splide.mount();
-
-
+        
         $(document).trigger("enhance");
     </script>
 

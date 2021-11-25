@@ -365,8 +365,16 @@
 
 }
 .splide.modal{
-    .cd-slideCard{
-        max-width: calc(80vw);
+    @include media("<tablet"){
+        .cd-slideCard{
+            max-width: calc(80vw);
+        }
+    }
+   
+    @include media(">desktop"){
+        .splide__slide {
+            // min-width: 60vw; 
+       }
     }
 }
 #trigger-sidebar{
