@@ -1,0 +1,163 @@
+<link rel="stylesheet" href="./css/js-offcanvas.css">
+<link rel="stylesheet" href="./../css/pages/offcanvas.css">
+<!--Offcanvas Content Wrapper-->
+<main class="c-offcanvas-content-wrap" role="main" aria-labelledby="accesible-offcanvas">  
+    <div class="c-page l-wrapper u-pos-relative">
+  
+      <h1 id="accesible-offcanvas"><span class="u-hidden-visually">Examples </span>Accesible Offcanvas</h1>
+      <h3>Overlay</h3>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-left">Left</button>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-right">Right</button>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-top">Top</button>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-bottom">Bottom</button>
+      <h3>Reveal</h3>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-left-reveal">Left - Reveal</button>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-right-reveal">Right - Reveal</button>
+      <h3>Push</h3>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-left-push">Left - Push</button>
+      <button class="c-button js-offcanvas-trigger" data-offcanvas-trigger="off-canvas-right-push">Right - Push</button>
+  
+      <article class="c-callout">
+        <h2 class="c-callout__title">Download</h2>
+        <p class="c-callout__text">A progressively enhanced jQuery off-canvas navigation plugin which lets you create fully accessible sidebar or top/bottom sliding (or push) panels with keyboard interactions and ARIA attributes.</p>
+        <a class="c-callout__button c-button c-button--green" href="https://github.com/vmitsaras/js-offcanvas/archive/master.zip">Download<b>.zip</b></a>
+        <p class="c-callout__footer u-text-center">
+          <a href="http://offcanvas.vasilis.co/">View Demo</a>
+            &nbsp;·&nbsp;            
+          <a href="https://github.com/vmitsaras/js-offcanvas">Github</a>
+          </p>
+      </article>
+      
+    </div>
+  </main>
+  
+  <!--
+  Offcanvas Panels
+  -->
+  
+  <!--Left-->
+  <aside class="js-offcanvas" id="off-canvas-left" role="complementary">
+    <div class="c-offcanvas__inner o-box u-pos-relative">
+        <ul class="c-menu c-menu--border u-unstyled">
+          <li class="c-menu__item c-menu__item--heading">Header</li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Home</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">About</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Portfolio</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Projects</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Contact</a></li>
+      </ul>
+    </div>
+  </aside>
+  
+  <!--Right-->
+  <aside class="js-offcanvas js-open" data-offcanvas-options='{"modifiers":"right,overlay"}' id="off-canvas-right" role="complementary">
+    <div class="c-offcanvas__inner o-box u-pos-relative">
+        <ul class="c-menu c-menu--border u-unstyled">
+          <li class="c-menu__item c-menu__item--heading">Header</li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Home</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">About</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Portfolio</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Projects</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Contact</a></li>
+      </ul>
+    </div>
+    <button class="js-offcanvas-close" data-button-options='{"modifiers":"blue,hard,close-right"}'>Close</button>
+  </aside>
+  
+  <!--Top-->
+  <aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"top,overlay,overflow-top"}' id="off-canvas-top" role="complementary">
+    <div class="c-offcanvas__inner u-pos-relative">
+      <div class="l-wrapper u-text-center">
+        <h3>Actions...</h3>
+        <ul class="c-menu u-unstyled o-list-inline">
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Save</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Edit</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">New</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+    <button class="js-offcanvas-close" data-button-options='{"modifiers":"green,close-bottom,circle"}'>Done</button>
+  </aside>
+  
+  <!--Bottom-->
+  <aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"bottom,overlay"}' id="off-canvas-bottom" role="complementary">
+    <div class="c-offcanvas__inner l-wrapper l-wrapper--sm">
+      <h3>Search</h3>
+      <form class="c-form js-form" action="#" id="search-form" onsubmit="return false;">
+        <div class="c-input-add-on">
+          <span class="c-input-add-on__item"><label for="search">This repository</label></span>
+          <input class="c-input-add-on__field c-input" type="search" placeholder="e.g. Accesible Offcanvas" id="search">
+          <button class="c-input-add-on__item c-button c-button--green">Search</button>
+        </div>
+      </form>
+      <button class="js-offcanvas-close" data-button-options='{"modifiers":"close-right-top,hard"}'>Close</button>
+    </div>
+  </aside>
+  
+  <!--
+   Reveal
+  -->
+  <!-- Reveal Left -->
+  <aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"left,reveal,shadow,shadow-right"}' id="off-canvas-left-reveal" role="complementary">
+    <div class="c-offcanvas__inner o-box u-pos-relative">
+        <ul class="c-menu c-menu--border u-unstyled">
+          <li class="c-menu__item c-menu__item--heading">Header</li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Home</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">About</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Portfolio</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Projects</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Contact</a></li>
+      </ul>
+    </div>
+  </aside>
+  
+  <!-- Reveal Right -->
+  <aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"right,reveal,shadow,shadow-left"}' id="off-canvas-right-reveal" role="complementary">
+    <div class="c-offcanvas__inner o-box u-pos-relative">
+        <ul class="c-menu c-menu--border u-unstyled">
+          <li class="c-menu__item c-menu__item--heading">Header</li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Home</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">About</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Portfolio</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Projects</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Contact</a></li>
+      </ul>
+    </div>
+  </aside>
+  
+  <!--
+   Push
+  -->
+  <!-- Push Left -->
+  <aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"left,push"}' id="off-canvas-left-push" role="complementary">
+    <div class="c-offcanvas__inner o-box u-pos-relative">
+        <ul class="c-menu c-menu--border u-unstyled">
+          <li class="c-menu__item c-menu__item--heading">Header</li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Home</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">About</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Portfolio</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Projects</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Contact</a></li>
+      </ul>
+    </div>
+  </aside>
+  
+  <!-- Push Right -->
+  <aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"right,push"}' id="off-canvas-right-push" role="complementary">
+    <div class="c-offcanvas__inner o-box u-pos-relative">
+        <ul class="c-menu c-menu--border u-unstyled">
+          <li class="c-menu__item c-menu__item--heading">Header</li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Home</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">About</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Portfolio</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Projects</a></li>
+          <li class="c-menu__item"><a class="c-menu__link" href="#nogo">Contact</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <script src="./../build/cd-script.js"></script>
+  <script src="./js/modernizr.min.js"></script>
+  <script src="./js/js-offcanvas.pkgd.min.js"></script>
+  <script src="./js/off-canvas.js"></script>
