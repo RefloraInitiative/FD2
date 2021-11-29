@@ -27,15 +27,15 @@
 
 .dash-check-square:before {
   content: "\e90f";
-  color: #100644;
+  color: inherit;
 }
 .dash-minus-circle:before {
   content: "\e910";
-  color: #100644;
+  color: inherit;
 }
 .dash-plus-circle:before {
   content: "\e911";
-  color: #100644;
+  color: inherit;
 }
 .dash-menu:before {
   content: "\e900";
@@ -45,52 +45,52 @@
 }
 .dash-calculate:before {
   content: "\e902";
-  color: #100644;
+  color: inherit;
 }
 .dash-carbon:before {
   content: "\e903";
-  color: #100644;
+  color: inherit;
 }
 .dash-close:before {
   content: "\e904";
-  color: #100644;
+  color: inherit;
 }
 .dash-close-arc:before {
   content: "\e905";
-  color: #100644;
+  color: inherit;
 }
 .dash-faq:before {
   content: "\e906";
-  color: #100644;
+  color: inherit;
 }
 .dash-left-arrow:before {
   content: "\e907";
-  color: #100644;
+  color: inherit;
 }
 .dash-logout:before {
   content: "\e908";
-  color: #100644;
+  color: inherit;
 }
 .dash-minus:before {
   content: "\e909";
 }
 .dash-plus:before {
   content: "\e90a";
-  color: #100644;
+  color: inherit;
 }
 .dash-plus-1:before {
   content: "\e90b";
-  color: #100644;
+  color: inherit;
 }
 .dash-project:before {
   content: "\e90c";
-  color: #100644;
+  color: inherit;
 }
 .dash-right-arrow:before {
   content: "\e90d";
-  color: #100644;
+  color: inherit;
 }
 .dash-setting:before {
   content: "\e90e";
-  color: #100644;
+  color: inherit;
 }
