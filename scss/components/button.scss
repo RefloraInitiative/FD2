@@ -50,6 +50,21 @@
         &.btn-secondary-inverted {
          @include button_secondary_inverted;
         }
+        &.btn-orange{
+            background-color: #FFA654;
+            color: #fff;
+        }
+        &.btn-white{
+            background-color: #f8fff9;
+            color: #100644;
+            &.btn-inactive{
+                background-color: rgba(248, 255, 249, 0.4);
+            }
+        }
+        &.btn-green{
+            background-color: #10681B;
+            color: #fff;
+        }
         
     }
 }

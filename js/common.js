@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
   // //tooltip
-  // jQuery('[data-toggle="tooltip"]').tooltip();
+   jQuery('[data-toggle="tooltip"]').tooltip();
 
   // jQuery(function () {
   //   jQuery('[data-toggle="popover"]').popover();

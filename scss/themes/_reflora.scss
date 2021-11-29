@@ -59,7 +59,7 @@ $tab-component-enable: false;
 $table-component-enable: false;
 //
 // Enable or diable tooltip component
-$tooltip-component-enable: false;
+$tooltip-component-enable: true;
 //
 
 // Enable or diable carousel component
@@ -283,8 +283,9 @@ $text-colors-values-list: ("primary":"100644",
   "purple":"7368ac",
   "green":"71bc61",
   "yellow":"ebd85c",
-  "red":"fda39d",
-  "orange":"FFA654"
+  "red":"DD0404",
+  "orange":"FFA654",
+  "grey":"949594"
 );
 // display
 $display-values-list: ("none": "none",

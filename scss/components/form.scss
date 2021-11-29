@@ -3,6 +3,11 @@
 @import "./../customize/base-style";
 @import "./../customize/media-query";
 @if $form-component-enable {
+
+.left-checkbox{
+    display: flex;
+}
+    
     /* password icon */
     .form-group span.glyphicon.glyphicon-eye-close,
     .form-group span.glyphicon.glyphicon-eye-open {

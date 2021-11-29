@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/cd-style.css" />
+    <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
+    <link rel="stylesheet" href="./fonts/cd/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/js-offcanvas.css">
+    <link rel="stylesheet" href="./../css/pages/offcanvas.css">
+
+</head>
+
+<body  style="background-image:url(./images/bg-checkout.svg);background-repeat: no-repeat;background-position: center;scrollbar-gutter: stable;background-size: cover;">
+    <!-- Right mobile sidebar -->
+    <aside class="js-offcanvas js-open nv-d-block desktop:nv-d-none"
+        data-offcanvas-options='{"modifiers":"right,overlay"}' id="off-canvas-right" role="complementary">
+        <div class="c-offcanvas__inner o-box u-pos-relative">
+            <div class="nv-d-flex nv-flex-column">
+                <a href="#">
+                    <img src="./images/logo/cd-logo.png" width="120" alt="Reflora brand logo" />
+                </a>
+                <svg class="nv-width-10 mar-v-20" xmlns="http://www.w3.org/2000/svg" width="264" height="1"
+                    viewBox="0 0 264 1" fill="none">
+                    <path d="M0 0.5H141M173 0.5H209M250 0.5H264" stokeWith="2" stroke="#F8FFF9" />
+                </svg>
+            </div>
+            <nav class="cd-verticalBar__list mobile">
+                <ul>
+                    <li>
+                        <a class="text-white" href="company-dashboard.html"><span
+                                class="dash-carbon"></span><span>Carbon balance</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="company-settings.html"><span
+                                class="dash-setting"></span><span>Settings</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
+                    </li>
+                    <li>
+                        <a class="text-white text-decoration-none nv-d-block  mar-t-15" href="#">Privacy policy</a>
+
+                    </li>
+                    <li><a class="text-white text-decoration-none nv-d-block  mar-b-15" href="#">T & C</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Right mobile sidebar -->
+        <button class="js-offcanvas-close bi bi-x-lg"
+            data-button-options='{"modifiers":"blue,hard,close-right"}'></button>
+    </aside>
+    <header class="cd-verticalBar hide">
+        <div class="cd-verticalBar__hamburger text-white bi bi-list"></div>
+        <nav class="cd-verticalBar__list">
+            <ul>
+                <li>
+                    <a class="text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon
+                            balance</span></a>
+                </li>
+                <li>
+                    <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
+                </li>
+                <li>
+                    <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
+                </li>
+                <li>
+                    <a class="active text-white" href="company-settings.html"><span
+                            class="dash-setting"></span><span>Settings</span></a>
+                </li>
+                <li>
+                    <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
+                </li>
+                <li>
+                    <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="cd-verticalBar__info text-center">
+            <a href="#">
+                <img class="mar-b-30" src="./images/logo/cd-logo.png" alt="Reflora brand logo" />
+            </a>
+            <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
+            <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">T & C</a>
+        </div>
+    </header>
+
+    <main class="desktop:mar-l-35 desktop:pad-l-40 ">
+        <button id="trigger-sidebar" class="c-button js-offcanvas-trigger  bi bi-list"
+        data-offcanvas-trigger="off-canvas-right"></button>
+     <div class="fluid-wrapper">
+        <div class="nv-row bg-white large-rounded shadow-large border-1 border-solid border-light mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
+            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
+                <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span
+                        class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
+            </div>
+            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                <p class="mar-b-0">Impact areas : <span class="text-red">8</span></p>
+            </div>
+            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                <select class="mar-t-n5 border-0">
+                    <option><a href="#">Project N</a></option>
+                    <option><a href="#">Project N</a></option>
+                    <option><a href="#">Project N</a></option>
+                    <option><a href="#">Project N</a></option>
+                    <option><a href="#">ALL Projects</a></option>
+                </select>
+            </div>
+        </div>
+     </div>
+
+   <div class="fluid-wrapper">
+    <div class="nv-row text-white">
+        <div class="nv-col-12 desktop:nv-col-6">
+            <div class="desktop:mar-h-60 mar-b-0 desktop:mar-t-30">
+                <h1 class="text-bigger mar-b-0  desktop:mar-r-60">
+                    CASTAÑERO, PERU
+                </h1>
+                <p class="text-white">Protect the most biodiverse forest on the planet in the heart of the Amazon
+                    Rainforest </p>
+                <button class="btn btn-orange btn-rounded">OFFSET</button>
+                <p class="text-white mar-t-20">PRICE: 10 EUROS</p>
+            </div>
+            <div class="desktop:mar-h-60 desktop:mar-t-30 nv-d-flex overflow-scroll nv-align-items-center desktop:nv-flex-column desktop:nv-align-items-start">
+                <button class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-rounded" data-tab-active data-show-container=".snap" data-hide-container=".story,.gallery,.qa">
+                    SNAPSHOT
+                </button>
+                <button class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-inactive btn-rounded" data-tab-active data-show-container=".story" data-hide-container=".snap,.gallery,.qa">
+                    STORY
+                </button>
+                <button class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-inactive btn-rounded" data-tab-active data-show-container=".gallery" data-hide-container=".story,.snap,.qa">
+                    GALLERY
+                </button>
+                <button class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-inactive btn-rounded" data-tab-active data-show-container=".qa" data-hide-container=".story,.gallery,.snap">
+                    QUALITY ANALYSIS
+                </button>
+            </div>
+
+        </div>
+        <div class="nv-col-12 desktop:nv-col-6">
+            <div class="snap">
+                snampshot
+            </div>
+            <div class="story">
+                story
+            </div>
+            <div class="gallery">
+                gallery
+            </div>
+            <div class="qa">
+                qa
+            </div>
+        </div>
+    </div>
+   </div>
+    </main>
+
+   
+
+    <script src="./../build/cd-script.js"></script>
+    <script src="./js/js-offcanvas.pkgd.min.js"></script>
+    <script src="./js/off-canvas.js"></script>
+    <script>
+        $(document).ready(function () {
+           
+            jQuery('[data-toggle-container]').click(function () {
+                var selector = jQuery(this).attr("data-toggle-container")
+                jQuery(selector).toggleClass("nv-d-none")
+            })
+            jQuery('[data-show-container]').click(function () {
+                var selector = jQuery(this).attr("data-show-container")
+                jQuery(selector).removeClass("nv-d-none")
+            })
+            jQuery('[data-hide-container]').click(function () {
+                var selector = jQuery(this).attr("data-hide-container")
+                jQuery(selector).addClass("nv-d-none")
+            })
+            jQuery('[data-tab-active]').click(function () {
+                jQuery('[data-tab-active]').addClass("btn-inactive")
+                jQuery(this).removeClass("btn-inactive") 
+            })
+            $(document).trigger("enhance");
+        });
+    </script>
+</body>
+
+</html>
