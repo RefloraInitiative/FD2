@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'dashboard';
-  src:  url('fonts/dashboard.eot?1ol5ru');
-  src:  url('fonts/dashboard.eot?1ol5ru#iefix') format('embedded-opentype'),
-    url('fonts/dashboard.ttf?1ol5ru') format('truetype'),
-    url('fonts/dashboard.woff?1ol5ru') format('woff'),
-    url('fonts/dashboard.svg?1ol5ru#dashboard') format('svg');
+  src:  url('fonts/dashboard.eot?qidnfe');
+  src:  url('fonts/dashboard.eot?qidnfe#iefix') format('embedded-opentype'),
+    url('fonts/dashboard.ttf?qidnfe') format('truetype'),
+    url('fonts/dashboard.woff?qidnfe') format('woff'),
+    url('fonts/dashboard.svg?qidnfe#dashboard') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dash-check-square:before {
+  content: "\e90f";
+  color: #100644;
+}
+.dash-minus-circle:before {
+  content: "\e910";
+  color: #100644;
+}
+.dash-plus-circle:before {
+  content: "\e911";
+  color: #100644;
+}
 .dash-menu:before {
   content: "\e900";
 }
@@ -33,52 +45,52 @@
 }
 .dash-calculate:before {
   content: "\e902";
-  color: inherit;
+  color: #100644;
 }
 .dash-carbon:before {
   content: "\e903";
-  color: inherit;
+  color: #100644;
 }
 .dash-close:before {
   content: "\e904";
-  color: inherit;
+  color: #100644;
 }
 .dash-close-arc:before {
   content: "\e905";
-  color: inherit;
+  color: #100644;
 }
 .dash-faq:before {
   content: "\e906";
-  color: inherit;
+  color: #100644;
 }
 .dash-left-arrow:before {
   content: "\e907";
-  color: inherit;
+  color: #100644;
 }
 .dash-logout:before {
   content: "\e908";
-  color: inherit;
+  color: #100644;
 }
 .dash-minus:before {
   content: "\e909";
 }
 .dash-plus:before {
   content: "\e90a";
-  color: inherit;
+  color: #100644;
 }
 .dash-plus-1:before {
   content: "\e90b";
-  color: inherit;
+  color: #100644;
 }
 .dash-project:before {
   content: "\e90c";
-  color: inherit;
+  color: #100644;
 }
 .dash-right-arrow:before {
   content: "\e90d";
-  color: inherit;
+  color: #100644;
 }
 .dash-setting:before {
   content: "\e90e";
-  color: inherit;
+  color: #100644;
 }
