@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reflora</title>
+        <link rel="stylesheet" href="./../build/cd-style.css" />
+        <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
+        <link rel="stylesheet" href="./fonts/cd/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/js-offcanvas.css" />
+        <link rel="stylesheet" href="./../css/pages/offcanvas.css" />
+        <link rel="stylesheet" href="/css/pages/project-tile.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reflora</title>
-    <link rel="stylesheet" href="./../build/cd-style.css" />
-    <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
-    <link rel="stylesheet" href="./fonts/cd/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="./css/js-offcanvas.css">
-    <link rel="stylesheet" href="./../css/pages/offcanvas.css">
-    <link rel="stylesheet" href="/css/pages/project-tile.css">
-</head>
-
-<body>
-    <!-- Right mobile sidebar -->
-    <aside class="js-offcanvas js-open nv-d-block desktop:nv-d-none"
-        data-offcanvas-options='{"modifiers":"right,overlay"}' id="off-canvas-right" role="complementary">
-        <div class="c-offcanvas__inner o-box u-pos-relative">
-            <div class="nv-d-flex nv-flex-column">
-                <a href="#">
-                    <img src="./images/logo/cd-logo.png" width="120" alt="Reflora brand logo" />
-                </a>
-                <svg class="nv-width-10 mar-v-20" xmlns="http://www.w3.org/2000/svg" width="264" height="1"
-                    viewBox="0 0 264 1" fill="none">
-                    <path d="M0 0.5H141M173 0.5H209M250 0.5H264" stokeWith="2" stroke="#F8FFF9" />
-                </svg>
+    <body>
+        <!-- Right mobile sidebar -->
+        <aside class="js-offcanvas js-open nv-d-block desktop:nv-d-none" data-offcanvas-options='{"modifiers":"right,overlay"}' id="off-canvas-right" role="complementary">
+            <div class="c-offcanvas__inner o-box u-pos-relative">
+                <div class="nv-d-flex nv-flex-column">
+                    <a href="#">
+                        <img src="./images/logo/cd-logo.png" width="120" alt="Reflora brand logo" />
+                    </a>
+                    <svg class="nv-width-10 mar-v-20" xmlns="http://www.w3.org/2000/svg" width="264" height="1" viewBox="0 0 264 1" fill="none">
+                        <path d="M0 0.5H141M173 0.5H209M250 0.5H264" stokeWith="2" stroke="#F8FFF9" />
+                    </svg>
+                </div>
+                <nav class="cd-verticalBar__list mobile">
+                    <ul>
+                        <li>
+                            <a class="text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon balance</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="company-settings.html"><span class="dash-setting"></span><span>Settings</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none nv-d-block mar-t-15" href="#">Privacy policy</a>
+                        </li>
+                        <li><a class="text-white text-decoration-none nv-d-block mar-b-15" href="#">T & C</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="cd-verticalBar__list mobile">
+            <!-- Right mobile sidebar -->
+            <button class="js-offcanvas-close bi bi-x-lg" data-button-options='{"modifiers":"blue,hard,close-right"}'></button>
+        </aside>
+        <header class="cd-verticalBar">
+            <div class="cd-verticalBar__hamburger text-white bi bi-list"></div>
+            <nav class="cd-verticalBar__list">
                 <ul>
                     <li>
-                        <a class="text-white" href="company-dashboard.html"><span
-                                class="dash-carbon"></span><span>Carbon balance</span></a>
+                        <a class="text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon balance</span></a>
                     </li>
                     <li>
                         <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
@@ -46,8 +72,7 @@
                         <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
                     </li>
                     <li>
-                        <a class="text-white" href="company-settings.html"><span
-                                class="dash-setting"></span><span>Settings</span></a>
+                        <a class="active text-white" href="company-settings.html"><span class="dash-setting"></span><span>Settings</span></a>
                     </li>
                     <li>
                         <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
@@ -55,190 +80,131 @@
                     <li>
                         <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
                     </li>
-                    <li>
-                        <a class="text-white text-decoration-none nv-d-block  mar-t-15" href="#">Privacy policy</a>
-
-                    </li>
-                    <li><a class="text-white text-decoration-none nv-d-block  mar-b-15" href="#">T & C</a></li>
                 </ul>
             </nav>
-        </div>
-        <!-- Right mobile sidebar -->
-        <button class="js-offcanvas-close bi bi-x-lg"
-            data-button-options='{"modifiers":"blue,hard,close-right"}'></button>
-    </aside>
-    <header class="cd-verticalBar">
-        <div class="cd-verticalBar__hamburger text-white bi bi-list"></div>
-        <nav class="cd-verticalBar__list">
-            <ul>
-                <li>
-                    <a class="text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon
-                            balance</span></a>
-                </li>
-                <li>
-                    <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
-                </li>
-                <li>
-                    <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
-                </li>
-                <li>
-                    <a class="active text-white" href="company-settings.html"><span
-                            class="dash-setting"></span><span>Settings</span></a>
-                </li>
-                <li>
-                    <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
-                </li>
-                <li>
-                    <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
-                </li>
-            </ul>
-        </nav>
-        <div class="cd-verticalBar__info text-center">
-            <a href="#">
-                <img class="mar-b-30" src="./images/logo/cd-logo.png" alt="Reflora brand logo" />
-            </a>
-            <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
-            <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">T & C</a>
-        </div>
-    </header>
-
-    <main class="desktop:mar-l-35 desktop:pad-l-40">
-        <button id="trigger-sidebar" class="c-button js-offcanvas-trigger  bi bi-list"
-            data-offcanvas-trigger="off-canvas-right"></button>
-        <div class="fluidwrapper">
-            <div class="tile-h-nav nv-row  mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
-                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
-                    <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span
-                            class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
-                </div>
-                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
-                    <p class="mar-b-0">Impact areas : <span class="text-red">8</span></p>
-                </div>
-                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
-                    <select class="mar-t-n5 border-0">
-                        <option><a href="#">Project N</a></option>
-                        <option><a href="#">Project N</a></option>
-                        <option><a href="#">Project N</a></option>
-                        <option><a href="#">Project N</a></option>
-                        <option><a href="#">ALL Projects</a></option>
-                    </select>
-                </div>
+            <div class="cd-verticalBar__info text-center">
+                <a href="#">
+                    <img class="mar-b-30" src="./images/logo/cd-logo.png" alt="Reflora brand logo" />
+                </a>
+                <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
+                <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">T & C</a>
             </div>
-        </div>
-        <div class="pad-20 desktop:pad-l-30">
-            <div class="nv-row">
-                <div class="nv-col-12">
+        </header>
 
-                    <div class="row">
-
-                        <div class="column desktop:pad-r-40">
-                            <h1 class="tile-headline font-weight-bold text-primary mar-b-20 pad-r-60">
-                                Our breakthrough project Quality Analysis maximizes your impact. Always.
-                            </h1>
-                            <a href="" class="tile-yellow-btn">
-                                <p>Learn more about RIQA</p>
-                            </a>
-                            <div class="flip-card">
-                                <div class="front">
-                                    <img src="./images/projects/flip-front.svg" style="width:100%">
-
-                                </div>
-                                <div class="back">
-                                    <img src="./images/projects/flip-back.svg" alt="">
-                                    <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
-                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flip-card">
-                                <div class="front">
-                                    <img src="./images/projects/flip-front.svg" style="width:100%">
-
-                                </div>
-                                <div class="back">
-                                    <img src="./images/projects/flip-back.svg" alt="">
-                                    <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
-                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tile-quote text-center">
-                                <div class="text">
-                                    <p class="quote">“</p>
-                                    Forests are on the front lines of climate change. These ecosystems, rich with
-                                    biodiversity, are increasingly vulnerable to changes in weather, temperature and
-                                    rainfall patterns.
-                                    <p class="quote float-right-0">”</p>
-                                </div>
-                                <p class="author clearfix text-right">UN Secretary General, 2015</p>
-                            </div>
-
-                        </div>
-                        <div class="column desktop:mar-t-35">
-                            <div class="flip-card">
-                                <div class="front">
-                                    <img src="./images/projects/flip-front.svg" style="width:100%">
-
-                                </div>
-                                <div class="back">
-                                    <img src="./images/projects/flip-back.svg" alt="">
-                                    <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
-                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flip-card">
-                                <div class="front">
-                                    <img src="./images/projects/flip-front.svg" style="width:100%">
-
-                                </div>
-                                <div class="back">
-                                    <img src="./images/projects/flip-back.svg" alt="">
-                                    <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
-                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flip-card">
-                                <div class="front">
-                                    <img src="./images/projects/flip-front.svg" style="width:100%">
-
-                                </div>
-                                <div class="back">
-                                    <img src="./images/projects/flip-back.svg" alt="">
-                                    <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
-                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+        <main class="desktop:mar-l-35 desktop:pad-l-40">
+            <button id="trigger-sidebar" class="c-button js-offcanvas-trigger bi bi-list" data-offcanvas-trigger="off-canvas-right"></button>
+            <div class="fluidwrapper">
+                <div class="tile-h-nav nv-row mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
+                        <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
                     </div>
-
-
-
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                        <p class="mar-b-0">Impact areas : <span class="text-red">8</span></p>
+                    </div>
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                        <select class="mar-t-n5 border-0">
+                            <option><a href="#">Project N</a></option>
+                            <option><a href="#">Project N</a></option>
+                            <option><a href="#">Project N</a></option>
+                            <option><a href="#">Project N</a></option>
+                            <option><a href="#">ALL Projects</a></option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <div class="fluid-wrapper">
-
-
+            <div class="pad-20 desktop:pad-l-30">
+                <div class="nv-row">
+                    <div class="nv-col-12">
+                        <div class="row">
+                            <div class="column desktop:pad-r-40">
+                                <h1 class="tile-headline font-weight-bold text-primary mar-b-20 pad-r-60">
+                                    Our breakthrough project Quality Analysis maximizes your impact. Always.
+                                </h1>
+                                <a href="#" class="tile-yellow-btn">
+                                    <p>Learn more about RIQA</p>
+                                </a>
+                                <div class="flip-card">
+                                    <div class="front">
+                                        <img src="./images/projects/flip-front.svg" class="full-width" alt="card front side" />
+                                    </div>
+                                    <div class="back">
+                                        <img src="./images/projects/flip-back.svg" alt="card back side " class="full-width" />
+                                        <div class="flip-card__button">
+                                            <a href="#" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                            <a href="#" class="btn btn-yellow btn-rounded">OFFSET</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card">
+                                    <div class="front">
+                                        <img src="./images/projects/flip-front.svg" class="full-width" alt="card front side" />
+                                    </div>
+                                    <div class="back">
+                                        <img src="./images/projects/flip-back.svg" alt="card back side " class="full-width" />
+                                        <div class="flip-card__button">
+                                            <a href="#" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                            <a href="#" class="btn btn-yellow btn-rounded">OFFSET</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tile-quote text-center">
+                                    <div class="text">
+                                        <p class="quote">“</p>
+                                        Forests are on the front lines of climate change. These ecosystems, rich with biodiversity, are increasingly vulnerable to changes in weather, temperature and rainfall patterns.
+                                        <p class="quote float-right-0">”</p>
+                                    </div>
+                                    <p class="author clearfix text-right">UN Secretary General, 2015</p>
+                                </div>
+                            </div>
+                            <div class="column desktop:mar-t-35">
+                                <div class="flip-card">
+                                    <div class="front">
+                                        <img src="./images/projects/flip-front.svg" class="full-width" alt="card front side" />
+                                    </div>
+                                    <div class="back">
+                                        <img src="./images/projects/flip-back.svg" alt="card back side " class="full-width" />
+                                        <div class="flip-card__button">
+                                            <a href="#" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                            <a href="#" class="btn btn-yellow btn-rounded">OFFSET</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card">
+                                    <div class="front">
+                                        <img src="./images/projects/flip-front.svg" class="full-width" alt="card front side" />
+                                    </div>
+                                    <div class="back">
+                                        <img src="./images/projects/flip-back.svg" alt="card back side " class="full-width" />
+                                        <div class="flip-card__button">
+                                            <a href="#" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                            <a href="#" class="btn btn-yellow btn-rounded">OFFSET</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card">
+                                    <div class="front">
+                                        <img src="./images/projects/flip-front.svg" class="full-width" alt="card front side" />
+                                    </div>
+                                    <div class="back">
+                                        <img src="./images/projects/flip-back.svg" alt="card back side " class="full-width" />
+                                        <div class="flip-card__button">
+                                            <a href="#" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                            <a href="#" class="btn btn-yellow btn-rounded">OFFSET</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-    </main>
-
-
-    <script src="./../build/cd-script.js"></script>
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-    <script src="./js/js-offcanvas.pkgd.min.js"></script>
-    <script src="./js/off-canvas.js"></script>
-    <script>
-        $(".flip-card").flip();
-    </script>
-</body>
-
+        </main>
+        <script src="./../build/cd-script.js"></script>
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+        <script src="./js/js-offcanvas.pkgd.min.js"></script>
+        <script src="./js/off-canvas.js"></script>
+        <script>
+            $(".flip-card").flip();
+        </script>
+    </body>
 </html>
