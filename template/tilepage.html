@@ -16,64 +16,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="./css/js-offcanvas.css">
     <link rel="stylesheet" href="./../css/pages/offcanvas.css">
-    <style>
-        .row {
-            display: -ms-flexbox;
-            /* IE10 */
-            display: flex;
-            -ms-flex-wrap: wrap;
-            /* IE10 */
-            flex-wrap: wrap;
-            padding: 0 4px;
-        }
-
-        /* Create four equal columns that sits next to each other */
-        .column {
-            -ms-flex: 50%;
-            /* IE10 */
-            flex: 50%;
-            max-width: 50%;
-            padding: 0 4px;
-        }
-
-        .column img {
-            margin-top: 8px;
-            vertical-align: middle;
-            width: 100%;
-        }
-
-        /* Responsive layout - makes a two column-layout instead of four columns */
-        @media screen and (max-width: 800px) {
-            .column {
-                -ms-flex: 50%;
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
-
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-            .column {
-                -ms-flex: 100%;
-                flex: 100%;
-                max-width: 100%;
-            }
-        }
-
-        .flip-card__button {
-            margin-top: -90px;
-            margin-bottom: 60px;
-            margin-left: 40px;
-        }
-
-        .flip-card__button a {
-            text-decoration: none;
-            backface-visibility: hidden;
-            width: 180px;
-            display: block;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/pages/project-tile.css">
 </head>
 
 <body>
@@ -164,7 +107,7 @@
             data-offcanvas-trigger="off-canvas-right"></button>
         <div class="fluidwrapper">
             <div
-                class="nv-row bg-white large-rounded shadow-large border-1 border-solid border-light mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
+                class="tile-h-nav nv-row  mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
                 <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
                     <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span
                             class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
@@ -189,21 +132,23 @@
 
                     <div class="row">
 
-                        <div class="column">
-                            <h1 class="text-biggest font-weight-bold text-primary pad-r-60">
-                                Our breakthrough project Quality Analysis maximizes your impact Always.
+                        <div class="column desktop:pad-r-40">
+                            <h1 class="tile-headline font-weight-bold text-primary mar-b-20 pad-r-60">
+                                Our breakthrough project Quality Analysis maximizes your impact. Always.
                             </h1>
+                            <a href="" class="tile-yellow-btn">
+                                <p>Learn more about RIQA</p>
+                            </a>
                             <div class="flip-card">
                                 <div class="front">
                                     <img src="./images/projects/flip-front.svg" style="width:100%">
-                                    <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded">OFFSET NOW</a>
-                                    </div>
+                                 
                                 </div>
                                 <div class="back">
                                     <img src="./images/projects/flip-back.svg" alt="">
                                     <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded">OFFSET NOW</a>
+                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
                                     </div>
                                 </div>
                             </div>
@@ -215,25 +160,20 @@
                                 <div class="back">
                                     <img src="./images/projects/flip-back.svg" alt="">
                                     <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded">OFFSET NOW</a>
+                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flip-card">
-                                <div class="front">
-                                    <img src="./images/projects/flip-front.svg" style="width:100%">
-
-                                </div>
-                                <div class="back">
-                                    <img src="./images/projects/flip-back.svg" alt="">
-                                    <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded">OFFSET NOW</a>
-                                    </div>
-                                </div>
+                           <div class="tile-quote text-center">
+                               <p class="text"><p class="quote">“</p>
+                                Forests are on the front lines of climate change.  These ecosystems, rich with biodiversity, are increasingly vulnerable to changes in weather, temperature and rainfall patterns.
+                                <p class="quote float-right-0">”</p> </p>
+                                <p class="author clearfix text-right">UN Secretary General, 2015</p>
                             </div>
 
                         </div>
-                        <div class="column">
+                        <div class="column desktop:mar-t-35">
                             <div class="flip-card">
                                 <div class="front">
                                     <img src="./images/projects/flip-front.svg" style="width:100%">
@@ -242,7 +182,8 @@
                                 <div class="back">
                                     <img src="./images/projects/flip-back.svg" alt="">
                                     <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded">OFFSET NOW</a>
+                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +195,8 @@
                                 <div class="back">
                                     <img src="./images/projects/flip-back.svg" alt="">
                                     <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded">OFFSET NOW</a>
+                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
                                     </div>
                                 </div>
                             </div>
@@ -266,7 +208,8 @@
                                 <div class="back">
                                     <img src="./images/projects/flip-back.svg" alt="">
                                     <div class="flip-card__button">
-                                        <a href="" class="btn btn-green btn-rounded">OFFSET NOW</a>
+                                        <a href="" class="btn btn-green btn-rounded mar-r-15">EXPLORE</a>
+                                        <a href="" class="btn btn-yellow btn-rounded">OFFSET</a>
                                     </div>
                                 </div>
                             </div>
