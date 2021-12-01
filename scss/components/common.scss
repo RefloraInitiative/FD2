@@ -13,6 +13,9 @@
 .br-20{
   border-radius: 20px !important;
 }
+[class^="dash-"], [class*=" dash-"],[class^="dash-"]::before, [class*=" dash-"]::before{
+  color: inherit !important;
+}
 .clearfix::after {
   display: block;
   clear: both;
