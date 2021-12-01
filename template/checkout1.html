@@ -16,6 +16,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="./css/js-offcanvas.css">
     <link rel="stylesheet" href="./../css/pages/offcanvas.css">
+    <link rel="stylesheet" href="/css/pages/checkout.css">
 
 </head>
 
@@ -106,16 +107,25 @@
     <main class="desktop:mar-l-35 desktop:pad-l-40 ">
         <button id="trigger-sidebar" class="c-button js-offcanvas-trigger  bi bi-list"
             data-offcanvas-trigger="off-canvas-right"></button>
-        <div class="fluid-wrapper">
-            <div
-                class="nv-row bg-white br-20 shadow-large border-1 border-solid border-light mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
-                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12">
-                    <p class="mar-b-0 text-primary">Offsetting <span class="text-red">50</span>Tons for the <span
-                            class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
+            <div class="fluidwrapper  pad-t-10">
+                <div class="tile-h-nav nv-row mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
+                        <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
+                    </div>
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                        <p class="mar-b-0">Impact areas : <span class="text-red">8</span></p>
+                    </div>
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                        <select class="mar-t-n5 border-0">
+                            <option>Project N</option>
+                            <option>Project N</option>
+                            <option>Project N</option>
+                            <option>Project N</option>
+                            <option>ALL Projects</option>
+                        </select>
+                    </div>
                 </div>
-
             </div>
-        </div>
 
         <div class="fluid-wrapper">
             <div class="nv-row  desktop:pad-30 desktop:mar-30">
@@ -123,31 +133,31 @@
 
                     <div data-mh="equal"
                         class="br-20 bg-white text-center border-1 border-light border-solid shadow-small">
-                        <h2 class="mar-b-20 font-weight-bold text-primary">CASTAÑERO, PERU</h2>
-                        <p class="text-small">PRICE PER TON OF CO2E: 10 EUROS</p>
+                        <h2 class="mar-b-20 checkout__title">CASTAÑERO, PERU</h2>
+                        <p class="checkout__text text-primary">PRICE PER TON OF CO2E: 10 EUROS</p>
                         <div class="nv-row mar-b-15 nv-align-items-center" data-addon="inject-snippet">
                             <div class="nv-col-5 text-right text-small">
-                                <p class="font-weight-bold mar-b-0"> AMOUNT: </p>
+                                <p class="checkout__bold-text mar-b-0"> AMOUNT: </p>
                             </div>
                             <div class="nv-col-7 nv-d-flex nv-align-items-center">
                                 <span class="dash-minus-circle text-orange heading-3"></span>  
                                 <input type="text" name="" class="cd-item-input mar-b-0 text-center mar-h-10" id="">
                                  
                                 <span class="dash-plus-circle  text-secondary heading-3"></span>
-                                <p class="text-small pad-0 mar-b-0 pad-h-10">TONS</p>
+                                <p class="checkout__text text-primary pad-0 mar-b-0 pad-h-10">TONS</p>
 
                             </div>
                         </div>
-                        <div class="nv-d-flex nv-justify-content-center">
-                            <p class="pad-h-5">TOTAL:</p>
-                            <p class="pad-h-5">20 Euros</p>
+                        <div class="nv-d-flex nv-justify-content-center mar-t-25 mar-b-20">
+                            <p class="pad-h-5 checkout__text text-primary">TOTAL:</p>
+                            <p class="pad-h-5 checkout__text text-primary">20 Euros</p>
                         </div>
-                        <p class="text-small text-grey mar-b-10">Reflora supports your investment in this forest with: </p>
-                        <p class="text-small text-grey mar-b-10">Internationally valid offset certificate </p>
-                        <p class="text-small text-grey mar-b-10">Official retirement documentation with unique serial number</p>
-                        <p class="text-small text-grey mar-b-10">Customized Impact Report </p>
-                        <p class="text-small text-grey mar-b-10">Shareable Climatag</p>
-                        <a class="pad-v-20 nv-d-block text-uppercase text-primary font-weight-bold" href="#">&lt;&lt;
+                        <p class="checkout__text text-grey mar-b-10">Reflora supports your investment in this forest with: </p>
+                        <p class="checkout__text text-grey mar-b-10">Internationally valid offset certificate </p>
+                        <p class="checkout__text text-grey mar-b-10">Official retirement documentation with unique serial number</p>
+                        <p class="checkout__text text-grey mar-b-10">Customized Impact Report </p>
+                        <p class="checkout__text text-grey mar-b-10">Shareable Climatag</p>
+                        <a class="pad-v-20 nv-d-block text-uppercase text-primary font-weight-bold mar-t-20 mar-b-40" href="#">&lt;&lt;
                             Previous</a>
                     </div>
 
@@ -156,58 +166,58 @@
 
                     <div data-mh="equal"
                         class="br-20 bg-white text-center border-1 border-light border-solid shadow-small">
-                        <h2 class="mar-b-20 font-weight-bold text-primary">CERTIFICATION DETAILS</h2>
+                        <h2 class="mar-b-20  checkout__title">CERTIFICATION DETAILS</h2>
                         <form class="pad-h-30" action="">
                             <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right text-small">
+                                <div class="nv-col-5 text-right checkout__text">
                                     BENEFICIARY NAME:
                                 </div>
                                 <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" class="cd-input mar-b-0" id="">
+                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
                                     <span data-toggle="tooltip" data-placement="top" title="Please choose this name carefully. These details will be used to issue your offsetting certificate, and documents"
-                                        class="bi bi-info-circle nv-d-inline-block pad-5"></span>
+                                        class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
                                 </div>
                             </div>
                             <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right text-small">
+                                <div class="nv-col-5 text-right checkout__text">
                                     COMPANY NAME:
                                 </div>
                                 <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" class="cd-input mar-b-0" id="">
+                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
                                     <span data-toggle="tooltip" data-placement="top" title="The invoice will be generated on this name"
-                                    class="bi bi-info-circle nv-d-inline-block pad-5"></span>
+                                    class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
                                 </div>
                             </div>
                             <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right text-small">
+                                <div class="nv-col-5 text-right checkout__text">
                                     VAT:
                                 </div>
                                 <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" class="cd-input mar-b-0" id="">
+                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
                                     <span data-toggle="tooltip" data-placement="top" title="Companies with a valid VAT in the EU (except Portugal) are"
-                                    class="bi bi-info-circle nv-d-inline-block pad-5"></span>
+                                    class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
                                 </div>
                             </div>
                             <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right text-small">
+                                <div class="nv-col-5 text-right checkout__text">
                                     OFFSETTING FOR:
                                 </div>
                                 <div class="nv-col-7 nv-d-flex">
                                     <input type="text" name="" placeholder="(Prefill with calculation name)"
-                                        class="cd-input mar-b-0" id="">
+                                        class="checkout-input mar-b-0" id="">
                                         <span data-toggle="tooltip" data-placement="top" title="Tooltip on right"
-                                        class="bi bi-info-circle nv-d-inline-block pad-5"></span>
+                                        class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
                                 </div>
                             </div>
                             <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right text-small">
+                                <div class="nv-col-5 text-right checkout__text">
                                     YEAR OF OFFSET:
                                 </div>
                                 <div class="nv-col-7 nv-d-flex">
                                     <input type="text" name="" placeholder="(Prefill with year on calculation)"
-                                        class="cd-input mar-b-0" id="">
+                                        class="checkout-input mar-b-0" id="">
                                         <span data-toggle="tooltip" data-placement="top" title="Tooltip on right"
-                                        class="bi bi-info-circle nv-d-inline-block pad-5"></span>
+                                        class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
                                 </div>
                             </div>
                             <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12 text-left">

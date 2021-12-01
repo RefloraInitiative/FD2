@@ -387,6 +387,10 @@
     display: none;
     @include media("<desktop"){
         display: block;
+        color: #100644;
+        font-size: 2rem;
+        right: -1rem;
+        font-weight: bold;
     }
 }
 

@@ -16,6 +16,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="./css/js-offcanvas.css">
     <link rel="stylesheet" href="./../css/pages/offcanvas.css">
+    <link rel="stylesheet" href="/css/pages/checkout.css">
 
 </head>
 
@@ -106,23 +107,32 @@
     <main class="desktop:mar-l-35 desktop:pad-l-40 ">
         <button id="trigger-sidebar" class="c-button js-offcanvas-trigger  bi bi-list"
             data-offcanvas-trigger="off-canvas-right"></button>
-        <div class="fluid-wrapper">
-            <div
-                class="nv-row bg-white br-20 shadow-large border-1 border-solid border-light mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
-                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12">
-                    <p class="mar-b-0 text-primary">Offsetting <span class="text-red">50</span>Tons for the <span
-                            class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
+            <div class="fluidwrapper pad-t-10">
+                <div class="tile-h-nav nv-row mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
+                        <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
+                    </div>
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                        <p class="mar-b-0">Impact areas : <span class="text-red">8</span></p>
+                    </div>
+                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
+                        <select class="mar-t-n5 border-0">
+                            <option>Project N</option>
+                            <option>Project N</option>
+                            <option>Project N</option>
+                            <option>Project N</option>
+                            <option>ALL Projects</option>
+                        </select>
+                    </div>
                 </div>
-
             </div>
-        </div>
 
         <div class="fluid-wrapper">
             <div class="nv-row  desktop:pad-30 desktop:mar-30">
                 <div class="nv-col-12 desktop:nv-col-6 mar-b-30 desktop:mar-b-0">
 
                     <div data-mh="equal" class="br-20 bg-white border-1 border-light border-solid shadow-small pad-40" style="height: 544.984px;">
-                        <h2 class="mar-t-0 mar-b-30  text-center font-weight-bold text-primary">OFFSET SUMMARY</h2>            
+                        <h2 class="mar-t-0 mar-b-30  text-center  checkout__title">OFFSET SUMMARY</h2>            
                         <p class="text-secondary font-weight-bold mar-v-20">BENEFICIARY NAME: MERCEDES BENZ</p>
                         <p class="text-small text-secondary  mar-b-10">COMPANY NAME: MERCEDES BENZ AG </p>
                         <p class="text-small text-secondary mar-b-10">VAT: 12345678</p>
@@ -150,7 +160,7 @@
 
                     <div data-mh="equal"
                         class="br-20 bg-white text-center border-1 border-light border-solid shadow-small">
-                        <h2 class="mar-b-30 font-weight-bold text-primary">PAYMENT DETAILS
+                        <h2 class="mar-b-30  checkout__title">PAYMENT DETAILS
                         </h2>
                         <form class="pad-h-30" action="">
                             <div class="nv-row mar-b-15 nv-align-items-center">
@@ -158,7 +168,7 @@
                                     CARDHOLDER NAME
                                 </div>
                                 <div class="nv-col-8 nv-d-flex">
-                                    <input type="text" name="" class="cd-input mar-b-0" id="">
+                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
                                  
                                 </div>
                             </div>
@@ -167,7 +177,7 @@
                                     CARD NUMBER
                                 </div>
                                 <div class="nv-col-8 nv-d-flex">
-                                    <input type="text" name="" class="cd-input mar-b-0" id="">
+                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
                                     
                                 </div>
                             </div>
@@ -178,7 +188,7 @@
                                 </div>
                                 <div class="nv-col-3 nv-d-flex">
                                     <input type="text" name="" placeholder="MM/YY"
-                                        class="cd-input mar-b-0" id="">
+                                        class="checkout-input mar-b-0" id="">
                                        
                                 </div>
                                 <div class="nv-col-2 text-right text-small">
@@ -186,7 +196,7 @@
                                 </div>
                                 <div class="nv-col-3 nv-d-flex">
                                     <input type="text" name="" placeholder="CVV"
-                                        class="cd-input mar-b-0" id="">
+                                        class="checkout-input mar-b-0" id="">
                                        
                                 </div>
                             </div>
