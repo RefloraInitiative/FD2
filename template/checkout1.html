@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reflora</title>
+        <link rel="stylesheet" href="./../build/cd-style.css" />
+        <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
+        <link rel="stylesheet" href="./fonts/cd/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/js-offcanvas.css" />
+        <link rel="stylesheet" href="./../css/pages/offcanvas.css" />
+        <link rel="stylesheet" href="/css/pages/checkout.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reflora</title>
-    <link rel="stylesheet" href="./../build/cd-style.css" />
-    <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
-    <link rel="stylesheet" href="./fonts/cd/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="./css/js-offcanvas.css">
-    <link rel="stylesheet" href="./../css/pages/offcanvas.css">
-    <link rel="stylesheet" href="/css/pages/checkout.css">
-
-</head>
-
-<body
-    style="background-image:url(./images/bg-checkout.svg);background-repeat: no-repeat;background-position: center;scrollbar-gutter: stable;background-size: cover;">
-    <!-- Right mobile sidebar -->
-    <aside class="js-offcanvas js-open nv-d-block desktop:nv-d-none"
-        data-offcanvas-options='{"modifiers":"right,overlay"}' id="off-canvas-right" role="complementary">
-        <div class="c-offcanvas__inner o-box u-pos-relative">
-            <div class="nv-d-flex nv-flex-column">
-                <a href="#">
-                    <img src="./images/logo/cd-logo.png" width="120" alt="Reflora brand logo" />
-                </a>
-                <svg class="nv-width-10 mar-v-20" xmlns="http://www.w3.org/2000/svg" width="264" height="1"
-                    viewBox="0 0 264 1" fill="none">
-                    <path d="M0 0.5H141M173 0.5H209M250 0.5H264" stokeWith="2" stroke="#F8FFF9" />
-                </svg>
+    <body style="background-image: url(./images/bg-checkout.svg); background-repeat: no-repeat; background-position: center; scrollbar-gutter: stable; background-size: cover;">
+        <!-- Right mobile sidebar -->
+        <aside class="js-offcanvas js-open nv-d-block desktop:nv-d-none" data-offcanvas-options='{"modifiers":"right,overlay"}' id="off-canvas-right" role="complementary">
+            <div class="c-offcanvas__inner o-box u-pos-relative">
+                <div class="nv-d-flex nv-flex-column">
+                    <a href="#">
+                        <img src="./images/logo/cd-logo.png" width="120" alt="Reflora brand logo" />
+                    </a>
+                    <svg class="nv-width-10 mar-v-20" xmlns="http://www.w3.org/2000/svg" width="264" height="1" viewBox="0 0 264 1" fill="none">
+                        <path d="M0 0.5H141M173 0.5H209M250 0.5H264" stokeWith="2" stroke="#F8FFF9" />
+                    </svg>
+                </div>
+                <nav class="cd-verticalBar__list mobile">
+                    <ul>
+                        <li>
+                            <a class="text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon balance</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="company-settings.html"><span class="dash-setting"></span><span>Settings</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none nv-d-block mar-t-15" href="#">Privacy policy</a>
+                        </li>
+                        <li><a class="text-white text-decoration-none nv-d-block mar-b-15" href="#">T & C</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="cd-verticalBar__list mobile">
+            <!-- Right mobile sidebar -->
+            <button class="js-offcanvas-close bi bi-x-lg" data-button-options='{"modifiers":"blue,hard,close-right"}'></button>
+        </aside>
+        <header class="cd-verticalBar hide">
+            <div class="cd-verticalBar__hamburger text-white bi bi-list"></div>
+            <nav class="cd-verticalBar__list">
                 <ul>
                     <li>
-                        <a class="text-white" href="company-dashboard.html"><span
-                                class="dash-carbon"></span><span>Carbon balance</span></a>
+                        <a class="text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon balance</span></a>
                     </li>
                     <li>
-                        <a class="text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
+                        <a class="active text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
                     </li>
                     <li>
                         <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
                     </li>
                     <li>
-                        <a class="text-white" href="company-settings.html"><span
-                                class="dash-setting"></span><span>Settings</span></a>
+                        <a class="text-white" href="company-settings.html"><span class="dash-setting"></span><span>Settings</span></a>
                     </li>
                     <li>
                         <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
@@ -57,57 +80,20 @@
                     <li>
                         <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
                     </li>
-                    <li>
-                        <a class="text-white text-decoration-none nv-d-block  mar-t-15" href="#">Privacy policy</a>
-
-                    </li>
-                    <li><a class="text-white text-decoration-none nv-d-block  mar-b-15" href="#">T & C</a></li>
                 </ul>
             </nav>
-        </div>
-        <!-- Right mobile sidebar -->
-        <button class="js-offcanvas-close bi bi-x-lg"
-            data-button-options='{"modifiers":"blue,hard,close-right"}'></button>
-    </aside>
-    <header class="cd-verticalBar hide">
-        <div class="cd-verticalBar__hamburger text-white bi bi-list"></div>
-        <nav class="cd-verticalBar__list">
-            <ul>
-                <li>
-                    <a class="text-white" href="company-dashboard.html"><span class="dash-carbon"></span><span>Carbon
-                            balance</span></a>
-                </li>
-                <li>
-                    <a class="active text-white" href="#"><span class="dash-project"></span><span>Projects</span></a>
-                </li>
-                <li>
-                    <a class="text-white" href="#"><span class="dash-calculate"></span><span>Calculator</span></a>
-                </li>
-                <li>
-                    <a class=" text-white" href="company-settings.html"><span
-                            class="dash-setting"></span><span>Settings</span></a>
-                </li>
-                <li>
-                    <a class="text-white" href="#"><span class="dash-faq"></span><span>FAQ'S</span></a>
-                </li>
-                <li>
-                    <a class="text-white" href="#"><span class="dash-logout"></span><span>Logout</span></a>
-                </li>
-            </ul>
-        </nav>
-        <div class="cd-verticalBar__info text-center">
-            <a href="#">
-                <img class="mar-b-30" src="./images/logo/cd-logo.png" alt="Reflora brand logo" />
-            </a>
-            <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
-            <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">T & C</a>
-        </div>
-    </header>
+            <div class="cd-verticalBar__info text-center">
+                <a href="#">
+                    <img class="mar-b-30" src="./images/logo/cd-logo.png" alt="Reflora brand logo" />
+                </a>
+                <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
+                <a class="text-white text-decoration-none nv-d-block text-smallest mar-b-15" href="#">T & C</a>
+            </div>
+        </header>
 
-    <main class="desktop:mar-l-35 desktop:pad-l-40 ">
-        <button id="trigger-sidebar" class="c-button js-offcanvas-trigger  bi bi-list"
-            data-offcanvas-trigger="off-canvas-right"></button>
-            <div class="fluidwrapper  pad-t-10">
+        <main class="desktop:mar-l-35 desktop:pad-l-40">
+            <button id="trigger-sidebar" class="c-button js-offcanvas-trigger bi bi-list" data-offcanvas-trigger="off-canvas-right"></button>
+            <div class="fluidwrapper pad-t-10">
                 <div class="tile-h-nav nv-row mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
                     <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
                         <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
@@ -127,127 +113,112 @@
                 </div>
             </div>
 
-        <div class="fluid-wrapper">
-            <div class="nv-row  desktop:pad-30 desktop:mar-30">
-                <div class="nv-col-12 desktop:nv-col-6 mar-b-30 desktop:mar-b-0">
+            <div class="fluid-wrapper">
+                <div class="nv-row desktop:pad-30 desktop:mar-30 desktop:nv-justify-content-center">
+                    <div class="nv-col-12 desktop:nv-col-5 mar-b-30 desktop:mar-b-0">
+                        <div data-mh="equal" class="br-20 bg-white text-center border-1 border-light border-solid shadow-small">
+                            <h2 class="mar-b-20 checkout__title">CASTAÑERO, PERU</h2>
+                            <p class="checkout__text text-primary">PRICE PER TON OF CO2E: 10 EUROS</p>
+                            <div class="nv-row mar-b-15 nv-align-items-center" data-addon="inject-snippet">
+                                <div class="nv-col-5 text-right text-small">
+                                    <label for="amount" class="checkout__bold-text mar-b-0">AMOUNT:</label>
+                                </div>
+                                <div class="nv-col-7 nv-d-flex nv-align-items-center">
+                                    <span class="dash-minus-circle text-orange heading-3"></span>
+                                    <input type="text" name="" class="cd-item-input mar-b-0 text-center mar-h-10" id="amount" />
 
-                    <div data-mh="equal"
-                        class="br-20 bg-white text-center border-1 border-light border-solid shadow-small">
-                        <h2 class="mar-b-20 checkout__title">CASTAÑERO, PERU</h2>
-                        <p class="checkout__text text-primary">PRICE PER TON OF CO2E: 10 EUROS</p>
-                        <div class="nv-row mar-b-15 nv-align-items-center" data-addon="inject-snippet">
-                            <div class="nv-col-5 text-right text-small">
-                                <p class="checkout__bold-text mar-b-0"> AMOUNT: </p>
+                                    <span class="dash-plus-circle text-secondary heading-3"></span>
+                                    <p class="checkout__text text-primary pad-0 mar-b-0 pad-h-10">TONS</p>
+                                </div>
                             </div>
-                            <div class="nv-col-7 nv-d-flex nv-align-items-center">
-                                <span class="dash-minus-circle text-orange heading-3"></span>  
-                                <input type="text" name="" class="cd-item-input mar-b-0 text-center mar-h-10" id="">
-                                 
-                                <span class="dash-plus-circle  text-secondary heading-3"></span>
-                                <p class="checkout__text text-primary pad-0 mar-b-0 pad-h-10">TONS</p>
-
+                            <div class="nv-d-flex nv-justify-content-center mar-t-25 mar-b-20">
+                                <p class="pad-h-5 checkout__text text-primary">TOTAL:</p>
+                                <p class="pad-h-5 checkout__text text-primary">20 Euros</p>
                             </div>
+                            <p class="checkout__text text-grey mar-b-10">Reflora supports your investment in this forest with:</p>
+                            <p class="checkout__text text-grey mar-b-10">Internationally valid offset certificate</p>
+                            <p class="checkout__text text-grey mar-b-10">Official retirement documentation with unique serial number</p>
+                            <p class="checkout__text text-grey mar-b-10">Customized Impact Report</p>
+                            <p class="checkout__text text-grey mar-b-10">Shareable Climatag</p>
+                            <a class="pad-v-20 nv-d-block text-uppercase text-primary font-weight-bold mar-t-20 mar-b-40" href="#">&lt;&lt; Previous</a>
                         </div>
-                        <div class="nv-d-flex nv-justify-content-center mar-t-25 mar-b-20">
-                            <p class="pad-h-5 checkout__text text-primary">TOTAL:</p>
-                            <p class="pad-h-5 checkout__text text-primary">20 Euros</p>
-                        </div>
-                        <p class="checkout__text text-grey mar-b-10">Reflora supports your investment in this forest with: </p>
-                        <p class="checkout__text text-grey mar-b-10">Internationally valid offset certificate </p>
-                        <p class="checkout__text text-grey mar-b-10">Official retirement documentation with unique serial number</p>
-                        <p class="checkout__text text-grey mar-b-10">Customized Impact Report </p>
-                        <p class="checkout__text text-grey mar-b-10">Shareable Climatag</p>
-                        <a class="pad-v-20 nv-d-block text-uppercase text-primary font-weight-bold mar-t-20 mar-b-40" href="#">&lt;&lt;
-                            Previous</a>
                     </div>
-
-                </div>
-                <div class="nv-col-12 desktop:nv-col-6 mar-b-30 desktop:mar-b-0">
-
-                    <div data-mh="equal"
-                        class="br-20 bg-white text-center border-1 border-light border-solid shadow-small">
-                        <h2 class="mar-b-20  checkout__title">CERTIFICATION DETAILS</h2>
-                        <form class="pad-h-30" action="">
-                            <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right checkout__text">
-                                    BENEFICIARY NAME:
-                                </div>
-                                <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
-                                    <span data-toggle="tooltip" data-placement="top" title="Please choose this name carefully. These details will be used to issue your offsetting certificate, and documents"
-                                        class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
-                                </div>
-                            </div>
-                            <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right checkout__text">
-                                    COMPANY NAME:
-                                </div>
-                                <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
-                                    <span data-toggle="tooltip" data-placement="top" title="The invoice will be generated on this name"
-                                    class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
-                                </div>
-                            </div>
-                            <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right checkout__text">
-                                    VAT:
-                                </div>
-                                <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" class="checkout-input mar-b-0" id="">
-                                    <span data-toggle="tooltip" data-placement="top" title="Companies with a valid VAT in the EU (except Portugal) are"
-                                    class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
-                                </div>
-                            </div>
-                            <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right checkout__text">
-                                    OFFSETTING FOR:
-                                </div>
-                                <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" placeholder="(Prefill with calculation name)"
-                                        class="checkout-input mar-b-0" id="">
-                                        <span data-toggle="tooltip" data-placement="top" title="Tooltip on right"
-                                        class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
-                                </div>
-                            </div>
-                            <div class="nv-row mar-b-15 nv-align-items-center">
-                                <div class="nv-col-5 text-right checkout__text">
-                                    YEAR OF OFFSET:
-                                </div>
-                                <div class="nv-col-7 nv-d-flex">
-                                    <input type="text" name="" placeholder="(Prefill with year on calculation)"
-                                        class="checkout-input mar-b-0" id="">
-                                        <span data-toggle="tooltip" data-placement="top" title="Tooltip on right"
-                                        class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
-                                </div>
-                            </div>
-                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12 text-left">
-                                <div class="left-control left-checkbox  nv-align-items-start">
-                                    <input type="checkbox" class="left-control-input" id="signup-privacy">
-                                    <label class="left-control-label mar-l-5 text-smallest" for="signup-privacy">I
-                                        confirm that all the information provided above is accurate and accountable.
+                    <div class="nv-col-12 desktop:nv-col-6 mar-b-30 desktop:mar-b-0">
+                        <div data-mh="equal" class="br-20 bg-white text-center border-1 border-light border-solid shadow-small">
+                            <h2 class="mar-b-20 checkout__title">CERTIFICATION DETAILS</h2>
+                            <form class="pad-h-30" action="">
+                                <div class="nv-row mar-b-15 nv-align-items-center">
+                                    <label for="b-name" class="nv-col-5 text-right checkout__text">
+                                        BENEFICIARY NAME:
                                     </label>
+                                    <div class="nv-col-7 nv-d-flex">
+                                        <input type="text" name="" class="checkout-input mar-b-0" id="b-name" />
+                                        <span
+                                            data-toggle="tooltip"
+                                            data-placement="top"
+                                            title="Please choose this name carefully. These details will be used to issue your offsetting certificate, and documents"
+                                            class="bi bi-info-circle nv-d-inline-block pad-l-5"
+                                        ></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nv-row mar-t-25 mar-b-25 nv-align-items-center nv-justify-content-center">
-                                <button class="btn btn-green btn-rounded">CONTINUE</button>
-                            </div>
-                        </form>
+                                <div class="nv-row mar-b-15 nv-align-items-center">
+                                    <label for="c-name" class="nv-col-5 text-right checkout__text">
+                                        COMPANY NAME:
+                                    </label>
+                                    <div class="nv-col-7 nv-d-flex">
+                                        <input type="text" name="" class="checkout-input mar-b-0" id="c-name" />
+                                        <span data-toggle="tooltip" data-placement="top" title="The invoice will be generated on this name" class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
+                                    </div>
+                                </div>
+                                <div class="nv-row mar-b-15 nv-align-items-center">
+                                    <label for="vat" class="nv-col-5 text-right checkout__text">
+                                        VAT:
+                                    </label>
+                                    <div class="nv-col-7 nv-d-flex">
+                                        <input type="text" name="" class="checkout-input mar-b-0" id="vat" />
+                                        <span data-toggle="tooltip" data-placement="top" title="Companies with a valid VAT in the EU (except Portugal) are" class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
+                                    </div>
+                                </div>
+                                <div class="nv-row mar-b-15 nv-align-items-center">
+                                    <label id="offset" class="nv-col-5 text-right checkout__text">
+                                        OFFSETTING FOR:
+                                    </label>
+                                    <div class="nv-col-7 nv-d-flex">
+                                        <input type="text" name="" placeholder="(Prefill with calculation name)" class="checkout-input mar-b-0" id="offset" />
+                                        <span data-toggle="tooltip" data-placement="top" title="Tooltip on right" class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
+                                    </div>
+                                </div>
+                                <div class="nv-row mar-b-15 nv-align-items-center">
+                                    <label for="year" class="nv-col-5 text-right checkout__text">
+                                        YEAR OF OFFSET:
+                                    </label>
+                                    <div class="nv-col-7 nv-d-flex">
+                                        <input type="text" name="" placeholder="(Prefill with year on calculation)" class="checkout-input mar-b-0" id="year" />
+                                        <span data-toggle="tooltip" data-placement="top" title="Tooltip on right" class="bi bi-info-circle nv-d-inline-block pad-l-5"></span>
+                                    </div>
+                                </div>
+                                <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12 text-left">
+                                    <div class="left-control left-checkbox nv-align-items-start">
+                                        <input type="checkbox" class="left-control-input" id="confirm" />
+                                        <label class="left-control-label mar-l-5 text-smallest" for="confirm">I confirm that all the information provided above is accurate and accountable. </label>
+                                    </div>
+                                </div>
+                                <div class="nv-row mar-t-25 mar-b-25 nv-align-items-center nv-justify-content-center">
+                                    <button class="btn btn-green btn-rounded">CONTINUE</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-
-    <script src="./../build/cd-script.js"></script>
-    <script src="./js/js-offcanvas.pkgd.min.js"></script>
-    <script src="./js/off-canvas.js"></script>
-    <script src="./../js/libraries/matchHeight.min.js"></script>
-    <script>
-        $(document).trigger("enhance");
-    </script>
-
-</body>
-
+        <script src="./../build/cd-script.js"></script>
+        <script src="./js/js-offcanvas.pkgd.min.js"></script>
+        <script src="./js/off-canvas.js"></script>
+        <script src="./../js/libraries/matchHeight.min.js"></script>
+        <script>
+            $(document).trigger("enhance");
+        </script>
+    </body>
 </html>

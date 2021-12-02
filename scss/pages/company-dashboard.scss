@@ -387,7 +387,7 @@
     display: none;
     @include media("<desktop"){
         display: block;
-        color: #100644;
+        color: #fff;
         font-size: 2rem;
         right: -1rem;
         font-weight: bold;
@@ -453,3 +453,6 @@ header.cd-verticalBar.hide.active  {
   .cd-verticalBar.hide.active .cd-verticalBar__list ul a.active span:first-child{
     color: #10681B !important;
   }
+  main.desktop\:mar-l-35.desktop\:pad-l-40 {
+    padding-top: 2rem;
+}
