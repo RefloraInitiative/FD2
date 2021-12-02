@@ -16,6 +16,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="./css/js-offcanvas.css">
     <link rel="stylesheet" href="./../css/pages/offcanvas.css">
+    <link rel="stylesheet" href="./../scss/pages/snap-shot.css">
 
 </head>
 
@@ -138,7 +139,7 @@
                 <button class="btn btn-orange btn-rounded">OFFSET</button>
                 <p class="text-white mar-t-20">PRICE: 10 EUROS</p>
             </div>
-            <div class="desktop:mar-h-60 desktop:mar-t-30 nv-d-flex overflow-scroll nv-align-items-center desktop:nv-flex-column desktop:nv-align-items-start">
+            <div class="desktop:mar-h-60 desktop:mar-t-30 nv-d-flex overflow-scroll overflow-hidden nv-align-items-center desktop:nv-flex-column desktop:nv-align-items-start">
                 <button class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-rounded" data-tab-active data-show-container=".snap" data-hide-container=".story,.gallery,.qa">
                     SNAPSHOT
                 </button>
@@ -156,10 +157,112 @@
         </div>
         <div class="nv-col-12 desktop:nv-col-6">
             <div class="snap">
-                snampshot
+                <div class="map nv-d-flex nv-justify-content-center mar-v-50">
+                    <img src="./images/map.png" width="100%" />
+                </div>
+                <div class="nv-d-flex">
+                    <div class="nv-col-10">
+                        <p class="snap-shot-header mar-b-5">NATURE AT IT’S PUREST</p>
+                        <p class="snap-shot-text mar-b-5">COUNTRY: Peru</p>
+                        <p class="snap-shot-text mar-b-5">REGION: Madre de Dios, Amazon Rainforest </p>
+                        <p class="snap-shot-text mar-b-5">AREA:  300,000 Hectares</p>
+                    </div>
+                    <div class="nv-col-2">
+                       <img class="float-right" src="./images/VCS-Logo-Verra-Color.png" />
+                    </div>
+                   
+                </div>
+                <div class="nv-d-flex">
+                    <p class="snap-shot-text mar-15">CHARACTERISTICS</p>
+                </div>
+
+                <div class="nv-d-flex nv-flex-wrap desktop:nv-col-12 nv-justify-content-center mar-h-auto">
+                    <div class="mobile:nv-col-6 tablet:nv-col-6 desktop:nv-col-3 widescreen:nv-col-3 mar-b-50 pad-h-2">
+                        <div href="#" class="characteristics text-center pad-5 text-decoration-none">
+                            <p class="mar-b-0 characteristics-title pad-t-20">17 Million tons</p>
+                            <p class="mar-b-0 characteristics-text pad-v-5">CO2E Captured</p>
+                        </div>
+                    </div>
+                    <div class="mobile:nv-col-6 tablet:nv-col-6 desktop:nv-col-3 widescreen:nv-col-3 mar-b-50 pad-h-2">
+                    <div href="#" class="characteristics text-center pad-5 text-decoration-none">
+                        <p class="mar-b-0 characteristics-title pad-t-20">405</p>
+                        <p class="mar-b-0 characteristics-text pad-v-5">Families benefitted</p>
+                    </div>
+                </div>
+                <div class="mobile:nv-col-6 tablet:nv-col-6 desktop:nv-col-3 widescreen:nv-col-3 mar-b-50 pad-h-2">
+                    <div href="#" class="characteristics text-center pad-5 text-decoration-none">
+                        <p class="mar-b-0 characteristics-title pad-t-20">2.2 million</p>
+                        <p class="mar-b-0 characteristics-text pad-v-5"> Cars removed from circulation</p>
+                    </div>
+                </div>
+                <div class="mobile:nv-col-6 tablet:nv-col-6 desktop:nv-col-3 widescreen:nv-col-3 mar-b-50 pad-h-2">
+                    <div href="#" class="characteristics text-center pad-5 text-decoration-none">
+                        <p class="mar-b-0 characteristics-title pad-t-20">49</p>
+                        <p class="mar-b-0 characteristics-text pad-v-5">Endangered species protected</p>
+                    </div>
+                </div>
+                </div>
             </div>
             <div class="story">
-                story
+                                
+                <div class="fluid-wrapper pad-0">
+                    <div class="nv-row pad-t-20">
+                    <div class=" nv-justify-content-center nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="nv-col-2 mobile:nv-col-5 mar-h-20 pad-10 timeline-content text-center bg-color-orange">
+                        <p class="text-white title">Paradise</p>
+                        </div>
+                    </div>
+                    <div class=" nv-justify-content-end nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="vl"><span class="dot mar-n10">&#8226;</span></div>
+                        <div class="nv-col-5 mar-h-20 mar-v-20 pad-10 timeline-content timeline-arrow-right timeline-text-right">
+                        <p class="content-text-right">Localizado a 12 horas de barco de Belém do Pará (Brasil), o projeto REDD+ de Marajó é um projeto emblemático na ilha de Marajó e na região amazônica.</p>
+                        </div>
+                    </div>
+                    <div class=" nv-justify-content-start nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="nv-col-5 mar-r-20 mar-v-20 pad-10 timeline-text-left">
+                        <p class="italic content-text-left">“Estou aqui há quatro anos e, nesse tempo, a região melhorou em 300%. É o único projeto com uma abordagem de longo prazo. Não há nada parecido na região.” Representante ICMBio.</p>
+                        </div>
+                        <div class="vl"></div>
+                    </div>
+                    <div class=" nv-justify-content-center nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="nv-col-2 mobile:nv-col-5 mar-h-20 pad-10 timeline-content text-center bg-color-orange">
+                        <p class="text-white title">2018</p>
+                        </div>
+                    </div>
+                    <div class=" nv-justify-content-end nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="vl"><span class="dot mar-n10">&#8226;</span></div>
+                        <div class="nv-col-5 mar-h-20 mar-v-20 pad-10 timeline-content timeline-arrow-right timeline-text-right">
+                        <p class="content-text-right">Localizado a 12 horas de barco de Belém do Pará (Brasil), o projeto REDD+ de Marajó é um projeto emblemático na ilha de Marajó e na região amazônica.</p>
+                        </div>
+                    </div>
+                    <div class=" nv-justify-content-start nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="nv-col-5 mar-r-20 mar-v-20 pad-10 timeline-text-left">
+                        <p class="italic content-text-left">“Estou aqui há quatro anos e, nesse tempo, a região melhorou em 300%. É o único projeto com uma abordagem de longo prazo. Não há nada parecido na região.” Representante ICMBio.</p>
+                        </div>
+                        <div class="vl"></div>
+                    </div>
+                    <div class=" nv-justify-content-center nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="nv-col-2 mobile:nv-col-5 mar-h-20 pad-10 timeline-content text-center bg-color-orange">
+                        <p class="text-white title">Focus 
+                            found again</p>
+                        </div>
+                    </div>
+                    <div class=" nv-justify-content-end nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="vl"><span class="dot mar-n10">&#8226;</span></div>
+                        <div class="nv-col-5 mar-h-20 mar-v-20 pad-10 timeline-content timeline-arrow-right timeline-text-right">
+                        <p class="content-text-right">Localizado a 12 horas de barco de Belém do Pará (Brasil), o projeto REDD+ de Marajó é um projeto emblemático na ilha de Marajó e na região amazônica.</p>
+                        </div>
+                    </div>
+                    <div class=" nv-justify-content-start nv-col-12 nv-d-flex mar-h-auto">
+                        <div class="nv-col-5 mar-r-20 mar-v-20 pad-10 timeline-text-left">
+                        <p class="italic content-text-left">“Estou aqui há quatro anos e, nesse tempo, a região melhorou em 300%. É o único projeto com uma abordagem de longo prazo. Não há nada parecido na região.” Representante ICMBio.</p>
+                        </div>
+                        <div class="vl"></div>
+                    </div>
+
+                    </div>
+                </div>
+
             </div>
             <div class="gallery">
                 gallery
