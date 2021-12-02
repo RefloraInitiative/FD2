@@ -1,4 +1,4 @@
-@import './../themes/reflora';
+@import "./../themes/reflora";
 @import "./../customize/mixins";
 @import "./../customize/functions";
 @import "./../customize/base-style";
@@ -30,16 +30,14 @@
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-
-    @include media("<tablet") {
-        font-size: 3rem !important;
-        margin-top: 40px;
-    }
     @include media(">desktop") {
-        font-size: 3rem !important;
         line-height: 85px;
         margin-top: 60px;
         font-size: 72px;
+    }
+    @include media("<tablet") {
+        font-size: 3rem !important;
+        margin-top: 40px;
     }
 }
 .tile-yellow-btn {
