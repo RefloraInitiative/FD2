@@ -460,3 +460,53 @@ header.cd-verticalBar.hide.active {
 main.desktop\:mar-l-35.desktop\:pad-l-40 {
     padding-top: 2rem;
 }
+.anchor-nav {
+    width: 100%;
+    position: relative;
+    text-align: right;
+    &__title {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #100644;
+        margin-bottom: 0;
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+    &__content {
+        padding: 30px 25px;
+        display: flex;
+        flex-direction: column;
+        background: #f8fff9;
+        border-radius: 18px;
+        width: 170px;
+        position: absolute;
+        z-index: 1000;
+        margin-left: 1rem;
+        text-align: left;
+        right: -25px;
+        top: 44px;
+        &.nv-d-none {
+            display: none;
+        }
+        a {
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #100644;
+            margin-bottom: 12px;
+            display: block;
+            text-decoration: none;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        a:hover {
+            color: #10681b;
+        }
+    }
+}

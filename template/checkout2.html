@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="./../css/pages/checkout.css" />
     </head>
 
-    <body style="background-image: url(./images/bg-checkout.svg); background-repeat: no-repeat; background-position: center; scrollbar-gutter: stable; background-size: cover;">
+    <body style="background-image: url(https://www.icegif.com/wp-content/uploads/icegif-5587.gif); background-repeat: no-repeat; background-position: center; scrollbar-gutter: stable; background-size: cover;">
         <!-- Right mobile sidebar -->
         <aside class="js-offcanvas js-open nv-d-block desktop:nv-d-none" data-offcanvas-options='{"modifiers":"right,overlay"}' id="off-canvas-right" role="complementary">
             <div class="c-offcanvas__inner o-box u-pos-relative">
@@ -102,13 +102,21 @@
                         <p class="mar-b-0">Impact areas : <span class="text-red">8</span></p>
                     </div>
                     <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-6 tablet:nv-col-3">
-                        <select class="mar-t-n5 border-0">
-                            <option>Project N</option>
-                            <option>Project N</option>
-                            <option>Project N</option>
-                            <option>Project N</option>
-                            <option>ALL Projects</option>
-                        </select>
+                        <div class="anchor-nav">
+                            <p class="anchor-nav__title" data-toggle-container="#anchorDropdown">Project 1 
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
+                                    <path d="M4.5 7L0.602885 0.25L8.39711 0.250001L4.5 7Z" fill="#100644" />
+                                </svg>
+                            </p>
+                            <div class="anchor-nav__content nv-d-none" id="anchorDropdown">
+                                <a href="#">Project 1</a>
+                                <a href="#">Project 2</a>
+                                <a href="#">Project 3</a>
+                                <a href="#">Project 4</a>
+                                <a href="#">Project 5</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -187,6 +195,14 @@
         <script src="./js/off-canvas.js"></script>
         <script src="./../js/libraries/matchHeight.min.js"></script>
         <script>
+            $(document).ready(function () {
+    
+                jQuery('[data-toggle-container]').click(function () {
+                    var selector = jQuery(this).attr("data-toggle-container")
+                    jQuery(selector).toggleClass("nv-d-none")
+                })
+               
+            });
             $(document).trigger("enhance");
         </script>
     </body>
