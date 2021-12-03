@@ -8,7 +8,7 @@ jQuery(document).ready(function () {
 
   // jQuery(".nv-custom-select").select2();
   // jQuery(".nv-custom-select-desc").select2();
-  $( ".cd-verticalBar__hamburger" ).click(function() {
+  $(".cd-verticalBar__hamburger").click(function() {
     $('.cd-verticalBar').toggleClass("active");
     $(this).toggleClass("active");
     });

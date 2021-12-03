@@ -1,0 +1,251 @@
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.snap-shot-header {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  color: #f8fff9;
+}
+
+.snap-shot-text {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f8fff9;
+}
+
+.float-right {
+  float: right;
+}
+
+.characteristics {
+  background: #dfeaff;
+  border-radius: 10px;
+  height: 90px;
+}
+
+.characteristics-title {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #100644;
+}
+
+.characteristics-text {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #7879f1;
+}
+
+/* time line component */
+
+.italic {
+  font-style: italic;
+}
+
+
+
+.vl::after {
+  border-left: 3px solid white;
+  height: auto;
+  position: absolute;
+  display: block;
+  content: " ";
+  background-color: #fff;
+  left: 50%;
+  right: 50%;
+  width: 2px;
+  height: 100%;
+}
+
+.dot {
+  font-size: 55px;
+  z-index: 1;
+  padding-top: 3rem;
+  position: absolute;
+  color: #FFA654;
+  display: block;
+  margin-left: -15px !important;
+  margin-top: -20px !important;
+
+}
+
+.timeline-content {
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+}
+
+.timeline-arrow-left::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 2rem;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(31, 28, 28);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+  left: 32.8rem;
+  border-radius: 50px;
+}
+
+.timeline-arrow-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 2.5rem;
+  width: 0;
+  z-index: 1;
+  left: -0.5rem;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.bg-color-orange {
+  background-color: #FFA654;
+}
+
+.title {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  left: 25.84%;
+  right: 28.06%;
+  top: 9.52%;
+  bottom: 53.27%;
+  padding: 0 20px ;
+  margin-bottom: 0 !important;
+}
+
+.timeline-text-left {
+  margin-left: 1.55rem;
+}
+
+.timeline-text-left-margin {
+  margin-left: 0.22rem !important;
+}
+
+.timeline-text-right {
+  /* margin-right: 5.22rem !important; */
+  margin-left: 1.28rem !important;
+
+}
+
+@media only screen and (max-width: 640px) {
+
+  .timeline-text-left {
+    margin-left: 0 !important;
+  }
+
+  .timeline-text-left-margin {
+    margin-left: 0.22rem !important;
+  }
+
+  .timeline-text-right {
+    margin-right: 0 !important;
+    margin-left: 2rem !important;
+  }
+}
+
+.content-text-left::before,.content-text-left::after{
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  position:absolute;
+}
+.content-text-left::before {
+  content: "“";
+  top: 7px;
+  left: 1px;
+}
+.content-text-left::after {
+  content: "”";
+  bottom: 15px;
+  right: 22px;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.number-count {
+  animation: counter 5s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 40px system-ui;
+  padding: 2rem;
+  float: right;
+  background-color: #FFA654;
+  color: white;
+  border-radius: 50%;
+  height: auto;
+}
+
+.number-count::after {
+  content: counter(num)"%";
+}
+
+.content-text-right {
+  left: 10.1%;
+  right: 7.21%;
+  top: 8.91%;
+  bottom: 12.87%;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0 !important;
+  color: #100644;
+}
+
+.content-text-left {
+  left: 61.17%;
+  right: 24.69%;
+  top: 35.56%;
+  bottom: 53.47%;
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #FEFFF9;
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+
+  to {
+    --num: 100;
+  }
+
+}

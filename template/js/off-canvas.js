@@ -3,41 +3,41 @@ $( function(){
   
     $( document ).bind( "beforecreate.offcanvas", function( e ){
       var dataOffcanvas = $( e.target ).data('offcanvas-component');
-      console.log(dataOffcanvas);
+    ////  console.log(dataOffcanvas);
       dataOffcanvas.onInit =  function() {
-       console.log(this);
+     ////  console.log(this);
       };
     } );
     
     $( document ).bind( "create.offcanvas", function( e ){
       var dataOffcanvas = $( e.target ).data('offcanvas-component');
-      console.log(dataOffcanvas);
+      //console.log(dataOffcanvas);
       dataOffcanvas.onOpen =  function() {
-        console.log('Callback onOpen');
+        //console.log('Callback onOpen');
       };
       dataOffcanvas.onClose =  function() {
-        console.log('Callback onClose');
+        //console.log('Callback onClose');
       };
     });
   
     $( document ).bind( "clicked.offcanvas-trigger clicked.offcanvas", function( e ){
       var dataBtnText = $( e.target ).text();
-      console.log(e.type + '.' + e.namespace + ': ' + dataBtnText);
+      //console.log(e.type + '.' + e.namespace + ': ' + dataBtnText);
     } );
   
     $( document ).bind( "open.offcanvas", function( e ){
       var dataOffcanvasID = $( e.target ).attr('id');
-      console.log(e.type + ': #' + dataOffcanvasID);
+      //console.log(e.type + ': #' + dataOffcanvasID);
     } );
   
     $( document ).bind( "resizing.offcanvas", function( e ){
       var dataOffcanvasID = $( e.target ).attr('id');
-      console.log(e.type + ': #' + dataOffcanvasID);
+      //console.log(e.type + ': #' + dataOffcanvasID);
     } );
   
     $( document ).bind( "close.offcanvas", function( e ){
       var dataOffcanvasID = $( e.target ).attr('id');
-      console.log(e.type + ': #' + dataOffcanvasID);
+      //console.log(e.type + ': #' + dataOffcanvasID);
     } );
   
     $( '.js-open' ).bind( "create.offcanvas", function( e ){
@@ -54,16 +54,16 @@ $( function(){
      
   
       function onFocusIn() {
-        console.log('onFocusIn');
+        //console.log('onFocusIn');
         api.options.resize = false;
-         console.log(api.options.resize);
+         //console.log(api.options.resize);
          $(window).off('resize.offcanvas orientationchange.offcanvas');
       }
       
       function onFocusOut() {
-        console.log('onFocusOut');
+        //console.log('onFocusOut');
         api.options.resize = true;
-         console.log(api.options.resize);
+         //console.log(api.options.resize);
          $(window).on('resize.offcanvas orientationchange.offcanvas');
         api.resize();
       }
