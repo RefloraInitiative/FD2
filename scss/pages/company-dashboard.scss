@@ -385,9 +385,7 @@
     display: none;
     @include media("<desktop") {
         display: block;
-        color: #fff;
         font-size: 2rem;
-        right: -1rem;
         font-weight: bold;
     }
 }

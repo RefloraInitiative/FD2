@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reflora</title>
     <link rel="stylesheet" href="./../build/cd-style.css" />
+    <link rel="stylesheet" href="./css/splide.css" />
     <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
     <link rel="stylesheet" href="./fonts/cd/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,11 +29,12 @@
             background-position: center;
             scrollbar-gutter: stable;
             background-size: cover;
-            height: 100vh;
+            height: 100%;
             display: block;
             z-index: -1;
         }
-        body{
+
+        body {
             background-color: transparent !important
         }
     </style>
@@ -125,7 +127,7 @@
             data-offcanvas-trigger="off-canvas-right"></button>
         <div class="fluidwrapper pad-t-10">
             <div class="tile-h-nav text-center nv-row mar-10 pad-10 mobile:mar-t-30 tablet:mar-t-10">
-                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 tablet:nv-col-6">
+                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-col-12 desktop:nv-col-6">
                     <p class="mar-b-0">Offsetting <span class="text-red">50</span>Tons for the <span
                             class="text-red">Mercedes Event</span>/ <span class="text-red">2021</span></p>
                 </div>
@@ -177,14 +179,15 @@
                         <h1 class="pp__title mar-b-0 desktop:mar-r-60 pad-r-60">
                             CASTAÑERO, PERU
                         </h1>
-                        <p class="pp__subtitle text-white mar-t-20">Protect the most biodiverse forest on the planet in
+                        <p class="pp__subtitle text-white mar-t-20 pad-h-0 desktop:nv-col-10">Protect the most
+                            biodiverse forest on the planet in
                             the heart of the Amazon Rainforest</p>
                         <a href="#" class="btn btn-yellow btn-rounded"
                             style="width: 140px; justify-content: center;">OFFSET</a>
                         <p class="text-white mar-t-20 pp__body-text">PRICE: 10 EUROS</p>
                     </div>
                     <div
-                        class="desktop:mar-h-30 desktop:mar-t-30 nv-d-flex overflow-scroll overflow-hidden nv-align-items-center desktop:nv-flex-column desktop:nv-align-items-start">
+                        class="h-scroll desktop:mar-h-30 desktop:mar-t-30 nv-d-flex overflow-scroll  nv-align-items-center desktop:nv-flex-column desktop:nv-align-items-start">
                         <button class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-rounded" data-tab-active
                             data-show-container=".snap" data-hide-container=".story,.gallery,.qa">
                             SNAPSHOT
@@ -193,7 +196,7 @@
                             data-tab-active data-show-container=".story" data-hide-container=".snap,.gallery,.qa">
                             STORY
                         </button>
-                        <button class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-inactive btn-rounded"
+                        <button onclick="test()" class="btn mar-r-10 text-nowrap desktop:mar-b-10 btn-white btn-inactive btn-rounded"
                             data-tab-active data-show-container=".gallery" data-hide-container=".story,.snap,.qa">
                             GALLERY
                         </button>
@@ -210,7 +213,7 @@
                                 <iframe title="Mapbox" width="100%" class="pp__map"
                                     src="https://api.mapbox.com/styles/v1/nhphillips/ckwnfyokk3g3b15pb9ocmv4s0.html?title=false&access_token=pk.eyJ1IjoibmhwaGlsbGlwcyIsImEiOiJja3dkaG5rZDkxY2liMnNxbGlha2wyZTV5In0.kPuR74CXkKI3n5S4zkeePg&zoomwheel=false#10.2/-1.421325/-50.294895"></iframe>
                             </div>
-                            <div class="nv-d-flex full-width">
+                            <div class="nv-d-flex full-width mobile:nv-flex-wrap tablet:nv-flex-nowrap">
                                 <div class="nv-col-12 desktop:nv-col-10">
                                     <p class="snap-shot-header mar-b-5">NATURE AT IT’S PUREST</p>
                                     <p class="snap-shot-text mar-b-5">COUNTRY: Peru</p>
@@ -218,14 +221,16 @@
                                     <p class="snap-shot-text mar-b-5">AREA: 300,000 Hectares</p>
                                 </div>
                                 <div class="nv-col-12 desktop:nv-col-2">
-                                    <img class="float-right" src="./images/VCS-Logo-Verra-Color.png" alt=" Veera brand logo" />
+                                    <img class="float-right" src="./images/VCS-Logo-Verra-Color.png"
+                                        alt=" Veera brand logo" />
                                 </div>
                             </div>
                             <div class="nv-d-flex full-width">
                                 <p class="snap-shot-text mar-15">CHARACTERISTICS</p>
                             </div>
 
-                            <div class="nv-d-flex nv-flex-wrap desktop:nv-col-12 mobile:pad-h-15 nv-justify-content-center mar-h-auto">
+                            <div
+                                class="nv-d-flex nv-flex-wrap desktop:nv-col-12 mobile:pad-h-15 nv-justify-content-center mar-h-auto">
                                 <div
                                     class="mobile:nv-col-6 tablet:nv-col-6 desktop:nv-col-3 widescreen:nv-col-3 mar-b-5 pad-h-2">
                                     <div href="#" class="characteristics text-center pad-5 text-decoration-none">
@@ -262,8 +267,7 @@
                         <div class="fluid-wrapper pad-0 desktop:pad-t-60">
                             <div class="nv-row pad-t-20">
                                 <div class="nv-justify-content-center nv-col-12 nv-d-flex mar-h-auto">
-                                    <div
-                                        class=" mar-h-20 pad-10 timeline-content text-center bg-color-orange">
+                                    <div class=" mar-h-20 pad-10 timeline-content text-center bg-color-orange">
                                         <p class="text-white title">Paradise</p>
                                     </div>
                                 </div>
@@ -312,8 +316,7 @@
                                     <div class="vl"></div>
                                 </div>
                                 <div class="nv-justify-content-center nv-col-12 nv-d-flex mar-h-auto">
-                                    <div
-                                        class=" mar-h-20 pad-10 timeline-content text-center bg-color-orange">
+                                    <div class=" mar-h-20 pad-10 timeline-content text-center bg-color-orange">
                                         <p class="text-white title">Focus found again</p>
                                     </div>
                                 </div>
@@ -339,8 +342,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gallery  nv-d-none">
-                        gallery
+                    <div class="gallery">
+
+                       
+                        <div id="main-slider" class="splide">
+                         
+                        </div>
+                        <div id="thumbnail-slider" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                    <img src="./images/img-1.png"alt=""/>
+                                    </li>
+                                    <li class="splide__slide">
+                                    <img src="./images/img-1.png"alt=""/>
+                                    </li>
+                                    <li class="splide__slide">
+                                    <img src="./images/img-1.png"alt=""/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="qa  nv-d-none">
                         qa
@@ -353,6 +375,8 @@
     <script src="./../build/cd-script.js"></script>
     <script src="./js/js-offcanvas.pkgd.min.js"></script>
     <script src="./js/off-canvas.js"></script>
+    <script src="./js/splide.js"></script>
+
     <script>
         $(document).ready(function () {
             jQuery("[data-toggle-container]").click(function () {
@@ -372,8 +396,55 @@
                 jQuery(this).removeClass("btn-inactive");
             });
             $(document).trigger("enhance");
+
+
+        
         });
+function test(){
+    var main = new Splide('#main-slider', {
+                    type: 'fade',
+                    rewind: true,
+                    pagination: false,
+                    arrows: false,
+                });
+
+
+                var thumbnails = new Splide('#thumbnail-slider', {
+                    fixedWidth: 100,
+                    fixedHeight: 60,
+                    gap: 10,
+                    rewind: true,
+                    pagination: false,
+                    cover: true,
+                    isNavigation: true,
+                    breakpoints: {
+                        600: {
+                            fixedWidth: 60,
+                            fixedHeight: 44,
+                        },
+                    },
+                });
+
+
+                main.sync(thumbnails);
+                main.mount();
+                thumbnails.mount();
+}
+
     </script>
+    <style>
+        .splide__slide img {
+  width: 100%;
+  height: auto;
+}
+.splide__slide {
+  opacity: 0.3;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+    </style>
 </body>
 
 </html>
