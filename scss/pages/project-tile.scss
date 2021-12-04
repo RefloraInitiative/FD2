@@ -115,6 +115,9 @@
         display: inline;
     }
     width: 373px;
+    @include media("<desktop"){
+        width: 300px;
+    }
     margin: auto;
     p.quote {
         font-family: Raleway;
@@ -188,6 +191,7 @@
     position: absolute;
     margin-bottom: 0 !important;
     text-transform: uppercase;
+    width: 100%;
     @include media("<desktop"){
         font-size: 30px !important;
         bottom: 4rem;
