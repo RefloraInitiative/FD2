@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora impact modal</title>
+    <link rel="stylesheet" href="./../build/cd-style.css" />
+    <link rel="stylesheet" href="./../css/pages/company-dashboard.css" />
+    <link rel="stylesheet" href="./fonts/cd/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../scss/pages/impact.css" />
+    <link rel="stylesheet" href="./css/impact.css">
+
+</head>
+
+<body>
+
+    <main class="desktop:mar-l-35 desktop:pad-l-40">
+        <div class="nv-d-flex nv-justify-content-start nv-align-items-center">
+            
+            <a data-toggle="modal" data-target="#impact-modal" class="font-weight-bold mar-l-20 text-smallest mar-b-10"
+                href="#">Open impact modal</a>
+        </div>
+    </main>
+        <div class="nv-modal fade cd-modal" id="impact-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="nv-modal-dialog nv-modal-lg" role="document">
+                <div class="nv-modal-content modal-background">
+                    <div class="modal-header nv-justify-content-center mar-h-auto tablet:mar-h-0">
+                        <h4 id="dataConfirmLabel" class="modal-title text-center mar-b-30 text-secondary">
+                            Which kind of impact areas are most relevant to your business?
+                        </h4>
+                        <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="nv-modal-header_close desktop:mar-r-n30"> <span aria-hidden="true"
+                                    class="nv-modal-header_x dash-close-arc"></span></span>
+                        </a>
+                    </div>
+                    <div class="nv-modal-body">
+                        <div class="">
+                            <div class="nv-d-flex nv-flex-wrap desktop:nv-col-12 nv-justify-content-center mar-h-auto">
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control  vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none" id="impact-checkbox">
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox">Endangered
+                                            Species</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox"  class="nv-d-none"  id="impact-checkbox-two">
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-two">Amazon Rainforest</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-three">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-three">Carbon Capture</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-four">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-four">Reforestation</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-five">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-five">Carbon Credits</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-six">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-six">High Performance RIQA</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-seven">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-seven">Forest Conservation</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-eight">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-eight">Sustainable Farming</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-nine">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-nine">Entrepreneurship</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-ten">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-ten">Community Development</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-eleven">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-eleven">Education</label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 tablet:nv-col-6 desktop:nv-col-4 widescreen:nv-col-4 mar-h-auto mar-v-10">
+                                    <div class="left-control vertically-middle nv-d-flex nv-justify-content-center">
+                                        <input type="checkbox" class="nv-d-none"  id="impact-checkbox-twelve">
+
+                                        <label class="vertically-middle text-center item-text item-border pad-v-15 pad-h-30" for="impact-checkbox-twelve">Europe</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="nv-d-flex nv-row mar-v-30 nv-align-items-center nv-justify-content-center">
+                                <div
+                                    class="mobile:nv-col-12 desktop:nv-col-5 tablet:nv-col-5 widescreen:nv-col-5 mar-v-5 text-left text-container">
+                                    <a href="#" class="select-all-text" id="select-all">I would like to select all</a>
+                                </div>
+                                <div
+                                    class="mobile:nv-col-12 desktop:nv-col-5 tablet:nv-col-5 widescreen:nv-col-5 mar-v-5">
+                                    <a href="#" class="select-all-text nv-d-block text-right  text-container">Continue to Projects>></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="./../build/cd-script.js"></script>
+    <script>
+        $( "#select-all" ).click(function() {
+        jQuery('#impact-modal input').prop('checked',true)
+
+        })
+    </script>
+</body>
+
+</html>

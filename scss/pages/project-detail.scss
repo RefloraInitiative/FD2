@@ -39,16 +39,17 @@
         border-radius: 21px;
     }
     &__right-content {
-        @include media(">desktop"){
+        @include media(">desktop") {
             overflow-y: scroll;
             position: fixed;
             width: 50%;
             right: -1.2rem;
             background: #0000008a;
             top: 0;
-            bottom: 0;           
+            bottom: 0;
+            overflow-x: hidden;
         }
-       padding: 15px !important;
+        padding: 15px !important;
     }
     & .tile-h-nav {
         z-index: 999;
@@ -72,6 +73,108 @@
             margin: 0 !important;
         }
     }
+}
+.qa {
+    .timeline-content {
+        background-color: transparent !important;
+        p {
+            color: white !important;
+        }
+        &::before {
+            display: none;
+        }
+        .title {
+            background: #ffa654;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+    }
+    .content-text-right {
+        font-size: 14px !important;
+        text-align: center !important;
+        line-height: 16.44px !important;
+    }
+    .timeline-text-left {
+        display: flex;
+        justify-content: center;
+        align-items: self-end;
+    }
+    .quote {
+        font-style: italic !important;
+        &::before {
+            content: "“";
+            top: 7px;
+            left: 1px;
+        }
+        &::after {
+            content: "”";
+            top: 15px;
+            right: 5px;
+        }
+        &::after,
+        &::before {
+            font-family: Raleway;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            position: absolute;
+        }
+    }
+    &-circle {
+        width: 100px;
+        height: 100px;
+        background-color: #ffa654;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        outline: 2px solid #ffa654;
+        border: 2px solid black;
+        &-title {
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 28px;
+            color: #ffa654;
+            margin-top: -1rem;
+            margin-bottom: 0;
+            position: absolute;
+        }
+    }
+    &-report {
+        background: #f8fff9;
+        border-radius: 10px;
+        filter: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 21px;
+        padding: 5px 10px;
+        text-align: center;
+        color: #10681b;
+        text-decoration: none;
+    }
+    .chart{
 
-  
+    }
+}
+
+.fotorama__nav__frame {
+    margin: 0 5px;
+}
+.fotorama__thumb {
+    border-radius: 10px;
+}
+
+.fotorama__stage__frame.fotorama__active img {
+    border-radius: 10px !important;
 }
